@@ -1155,14 +1155,35 @@
       
       const carousel = document.querySelector('.carousel');
 const slides = Array.from(carousel.children);
-const slideWidth = slides[0].getBoundingClientRect().width;
+let slideWidth = slides[0].getBoundingClientRect().width;
 
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
-const indicators = document.querySelectorAll('.indicator');
+let indicators = document.querySelectorAll('.indicator');
 
 // Текущий индекс
 let currentIndex = 0;
+
+// Функция для создания индикаторов
+function createIndicators(slidesToShow) {
+    const indicatorContainer = document.querySelector('.indicators');
+    indicatorContainer.innerHTML = ''; // Очищаем старые индикаторы
+    
+    // Создаем новые индикаторы в зависимости от количества видимых слайдов
+    for (let i = 0; i < slidesToShow; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        if (i === 0) {
+            indicator.classList.add('active'); // Первый индикатор активный
+        }
+        indicator.addEventListener('click', () => {
+            goToSlide(i * 2); // Переход к первому слайду в паре
+        });
+        indicatorContainer.appendChild(indicator);
+    }
+    
+    indicators = document.querySelectorAll('.indicator'); // Обновляем массив индикаторов
+}
 
 // Функция для установки активного индикатора
 function setActiveIndicator(index) {
@@ -1182,7 +1203,6 @@ function goToSlide(index) {
     setActiveIndicator(currentIndex);
 }
 
-
 // Обработчики для кнопок "назад" и "вперед"
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) { 
@@ -1196,45 +1216,40 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-// Обработчики для индикаторов
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        goToSlide(index * 2);
-    });
-});
-
 // Обработчик для отслеживания прокрутки
 carousel.addEventListener('scroll', () => {
-    // Вычисляем новый индекс по позиции прокрутки
     const newIndex = Math.floor(carousel.scrollLeft / slideWidth);
-    
-    // Если индекс изменился, обновляем индикаторы
     if (newIndex !== currentIndex) {
         currentIndex = newIndex;
         setActiveIndicator(currentIndex);
     }
 });
 
+// Фильтрация по тегам и создание новых индикаторов
 document.querySelectorAll('.tag').forEach((btn) => {
     btn.addEventListener('click', () => {
         const filter = btn.dataset.filter; // Получаем фильтр
-
+        
+        let visibleSlides = 0; // Считаем видимые слайды
         slides.forEach((slide) => {
             if (filter === 'all' || slide.classList.contains(filter)) {
-                slide.classList.add('show'); // Показываем, если соответствует фильтру
+                slide.classList.add('show');
+                visibleSlides++; // Увеличиваем счетчик видимых слайдов
             } else {
-                slide.classList.remove('show'); // Скрываем, если не соответствует
+                slide.classList.remove('show');
             }
         });
 
-        // Прокручиваем карусель в начало, чтобы отобразить первые видимые слайды
+        // Прокручиваем карусель в начало
         carousel.scrollTo({ left: 0, behavior: 'smooth' });
-       
-        // Обновляем текущий индекс и индикаторы
-        currentIndex = 0;
+        
+        // Обновляем индикаторы и текущий индекс
+        createIndicators(visibleSlides / 2); // Создаем индикаторы для видимых слайдов
+        currentIndex = 0; // Начинаем с первого видимого слайда
         setActiveIndicator(currentIndex);
     });
 });
+
 
         var overlay = document.querySelector('.modal-overlay');
             overlay.addEventListener("click", function(event) {
