@@ -52,7 +52,7 @@ h5 {
 
 .page-header {
     display: flex;
-    padding-top: 40px;
+    padding-top: 28px;
     align-items: center;
     padding-bottom: 28px;
     justify-content: center
@@ -393,7 +393,7 @@ sup {
 }
 
 
-.rating {
+#rating {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -480,6 +480,10 @@ sup {
     margin: 4px 0 12px;
 }
 
+.card-rating-mob {
+    display: none;
+}
+
 .review-name {
     color: #3A3A3C;
 }
@@ -511,12 +515,11 @@ sup {
 .carousel {
     display: flex;
     overflow-x: auto;
-    margin: 0 -4px;
+    margin: 0 -12px;
     scroll-snap-type: x mandatory;
     /* Для привязки к элементам при скролле */
     -webkit-overflow-scrolling: touch;
     /* Улучшение прокрутки на мобильных устройствах */
-    padding: 16px;
 }
 
 
@@ -524,11 +527,7 @@ sup {
 .slide {
     display: inline-block;
     scroll-snap-align: start;
-    width: calc(50%-20px);
-    min-width: 636px;
-    height: 280px;
-    margin-right: 16px;
-    padding: 8px;
+    padding: 12px;
 }
 
 .carousel .slide {
@@ -878,9 +877,15 @@ textarea {
         display: flex;
     }
 
-
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        background: white;
+        padding: 24px;
+        right: 0;
+        transform: translateX(-100%);
     }
 
     .menu {
@@ -906,7 +911,7 @@ textarea {
     }
 
     .button1 {
-        
+
         padding: 10px 40px;
         gap: 10px;
         width: 171px;
@@ -930,14 +935,14 @@ textarea {
     .advantage-list {
         flex-direction: column;
         gap: 12px;
-        margin:0 20px 64px;
+        margin: 0 20px 64px;
     }
-    
+
     .advantage-card {
         gap: 8px;
         padding: 20px 20px 28px;
     }
-    
+
     .advantage-title {
         gap: 8px;
     }
@@ -956,7 +961,7 @@ textarea {
         gap: 12px;
         margin: 0 20px 64px;
     }
-    
+
     .card {
         width: 350px;
         padding: 20px 32px 24px 32px;
@@ -967,21 +972,21 @@ textarea {
         height: 145px;
         object-fit: cover;
     }
-    
+
     .card-title {
         padding: 12px 0 8px;
     }
-    
+
     .card-info {
         padding-bottom: 4px;
     }
-    
-    
+
+
     .tag-list {
         gap: 3px;
         padding: 8px 0 16px;
     }
-    
+
     .tag-list li {
         padding: 3px 8px 4px;
         gap: 10px;
@@ -989,13 +994,13 @@ textarea {
         font-size: 12px;
         line-height: 16px;
     }
-    
+
     .price {
         font-size: 14px;
         line-height: 17px;
         padding-bottom: 16px;
     }
-    
+
     .button3 {
         padding: 0 0;
         width: 286px;
@@ -1004,6 +1009,10 @@ textarea {
 
     #reviews {
         margin-left: 20px;
+    }
+
+    #rating {
+        gap: 12px;
     }
 
     .review {
@@ -1019,11 +1028,11 @@ textarea {
         gap: 4px;
         padding: 8px 12px;
         font-weight: 500;
-        font-size: 14px; 
+        font-size: 14px;
         height: 33px;
-        
+
     }
-    
+
     .tag img {
         height: 24px;
     }
@@ -1038,72 +1047,82 @@ textarea {
 
     .card-review {
         width: 350px;
-        height: 253px;
+        height: 264px;
         padding: 20px;
     }
-    
+
+    .card-rating-web {
+        display: none;
+    }
+
+    .card-rating-mob {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
     .card-name {
-        gap: 12px;
+        gap: 8px;
         font-size: 14px;
-        color: #1C1C1E;
-        font-weight: 500;
         margin-bottom: 4px;
     }
-    
+
     .user-pic {
-        width: 32px;
-        height: 32px;
-        border-radius: 20px;
+        width: 24px;
+        height: 24px;
     }
-    
+
     .comment-container {
-        margin-left: 0px;
+        margin-left: 4px;
     }
-    
-    
+
+    .rating {
+        margin: 8px 0 4px;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+    }
+
+
     .date {
         font-size: 13px;
-        font-weight: 400;
-        color: #636366;
     }
-    
+
     .card-rating {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+
         gap: 8px;
         margin: 4px 0 12px;
     }
-    
+
     .review-name {
         color: #3A3A3C;
     }
-    
+
     .comment-items {
         display: flex;
         flex-direction: column;
         gap: 4px;
     }
-    
+
     .comment-heading {
         font-weight: 500;
         font-size: 14px;
         color: #3A3A3C;
     }
-    
+
     .comment {
         color: #636366;
         line-height: 17px;
         height: 66px;
         max-height: 66px;
     }
-    
+
     .link {
         text-decoration-line: underline;
         font-weight: 400;
         color: #1047B0;
     }
-    
+
     .carousel {
         display: flex;
         overflow-x: auto;
@@ -1112,47 +1131,47 @@ textarea {
         /* Для привязки к элементам при скролле */
         -webkit-overflow-scrolling: touch;
         /* Улучшение прокрутки на мобильных устройствах */
-        padding: 16px;
+        padding: 0 0 12px 20px;
     }
-    
-    
+
+
     /* Стиль для элементов внутри карусели */
     .slide {
         min-width: 350px;
         margin-right: 16px;
         padding: 8px;
     }
-    
+
     .carousel .slide {
         display: none;
         /* По умолчанию скрываем слайды */
     }
-    
+
     .carousel .slide.show {
         display: inline-block;
         /* Показываем слайды, которые должны быть видимыми */
     }
-    
+
     .no-scrollbar {
-    
+
         overflow-y: auto;
         /* Позволяет вертикальную прокрутку */
         scrollbar-width: none;
         /* Скрывает полосу прокрутки в Firefox */
     }
-    
+
     .no-scrollbar::-webkit-scrollbar {
         display: none;
         /* Скрывает полосу прокрутки в Chrome и Safari */
     }
-    
+
     .indicators {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 16px;
     }
-    
+
     .indicator {
         width: 8px;
         height: 8px;
@@ -1163,14 +1182,14 @@ textarea {
         transition: background-color 0.3s;
         /* Плавный переход при изменении цвета */
     }
-    
+
     .indicator.active {
         background-color: #1047B0;
         width: 10px;
         height: 10px;
     }
-    
 
-    
+
+
 
 }
