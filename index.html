@@ -16,7 +16,7 @@
 <body>
     <div class="page">
         <header class="page-header">
-            <img src="logo.svg">
+            <img class="logo" src="logo.svg">
             <div class="contacts">
                 <div class="contacts-col">
                     <div class="contacts-item">
@@ -49,7 +49,30 @@
             <button
                 onclick="goToLink('https://api.whatsapp.com/send/?phone=79991185855&text&type=phone_number&app_absent=0')">Связаться
                 с нами</button>
+            <div class="navbar">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1117_12132)">
+                            <rect width="32" height="32" fill="white" />
+                            <path d="M4 24H28V21.3333H4V24ZM4 17.3333H28V14.6667H4V17.3333ZM4 8V10.6667H28V8H4Z"
+                                fill="#1047B0" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1117_12132">
+                                <rect width="32" height="32" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
         </header>
+        <div class="nav-links">
+            <a href="#about">О компании</a>
+            <a href="#gruzoperevozki">Грузоперевозки</a>
+            <a href="#gruzoperevozki">Аренда спецтехники</a>
+            <a href="#contact">Нерудные материалы</a>
+            <a href="#services">Услуги</a>
+        </div>
         <div class="menu">
             <div class="menu-item">
                 <a href="https://speclg.ru/#o-kompanii">О компании</a>
@@ -69,7 +92,7 @@
         </div>
         <div class="banner">
             <div class="text">
-                <h1>Аренда экскаваторов-погрузчиков в Санкт-Петербурге и Ленобласти</h1>
+                <h1>Аренда экскаваторов-погрузчиков в Санкт-Петербурге и Ленобласти</h1>
             </div>
             <div class="buttons">
                 <button class="button1" onclick="openModal()">Заказать</button>
@@ -80,16 +103,16 @@
         <div class="info">
             <h2>Экскаваторы-погрузчики</h2>
             <p>К достоинствам экскаватора-погрузчика относят практичность, универсальность, маневренность,
-                экономичность, надежность, возможность работы без перерывов (при сменном графике операторов). Отдельно
-                стоит упомянуть о неприхотливости техники: она проста в обслуживании и не требует большого рабочего
-                пространства. При необходимости экскаватор-погрузчик может стать альтернативой бульдозеру.
-                Все экскаваторы-погрузчики предоставляются в аренду с опытными машинистами.
+                экономичность, надежность, возможность работы без перерывов (при сменном графике операторов). Отдельно
+                стоит упомянуть о неприхотливости техники: она проста в обслуживании и не требует большого рабочего
+                пространства. При необходимости экскаватор-погрузчик может стать альтернативой бульдозеру.
+                Все экскаваторы-погрузчики предоставляются в аренду с опытными машинистами.
             </p>
         </div>
         <div class="advantage-list">
             <div class="advantage-card">
                 <div class="advantage-title">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M25.8562 1.06252C25.2312 1.21877 24.6062 1.75002 24.325 2.36252C24.2 2.63752 24.1625 2.81877 24.1562 3.15627C24.1562 3.57502 24.2312 3.80627 26.0875 8.93752C27.15 11.875 28.025 14.2875 28.0312 14.3C28.0437 14.3125 28.1687 14.2563 28.3187 14.175C28.5625 14.0438 28.7062 14.025 29.6562 14L30.725 13.9688L29.65 8.25627C29.0562 5.11252 28.525 2.41877 28.4687 2.26877C28.325 1.90002 27.8312 1.40627 27.4062 1.21252C27.0125 1.03127 26.2687 0.962518 25.8562 1.06252ZM26.8437 3.15627C26.9437 3.25002 27 3.38127 27 3.50002C27 3.61877 26.9437 3.75002 26.8437 3.84377C26.75 3.94377 26.6187 4.00002 26.5 4.00002C26.3812 4.00002 26.25 3.94377 26.1562 3.84377C26.0562 3.75002 26 3.61877 26 3.50002C26 3.38127 26.0562 3.25002 26.1562 3.15627C26.25 3.05627 26.3812 3.00002 26.5 3.00002C26.6187 3.00002 26.75 3.05627 26.8437 3.15627Z"
                             fill="#1047B0" />
@@ -113,19 +136,19 @@
             </div>
             <div class="advantage-card">
                 <div class="advantage-title">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.54545 16C4.54545 9.67383 9.67383 4.54545 16 4.54545C22.3262 4.54545 27.4545 9.67383 27.4545 16C27.4545 22.3262 22.3262 27.4545 16 27.4545C9.67383 27.4545 4.54545 22.3262 4.54545 16ZM16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2ZM22.6272 13.0818L14.9909 20.7181C14.4938 21.2152 13.688 21.2152 13.191 20.7181L9.37277 16.9C8.87574 16.4029 8.87574 15.5971 9.37277 15.1C9.8698 14.603 10.6757 14.603 11.1727 15.1L14.0909 18.0183L20.8273 11.2819C21.3243 10.7848 22.1302 10.7848 22.6272 11.2819C23.1243 11.7789 23.1243 12.5847 22.6272 13.0818Z"
                             fill="#1047B0" />
                     </svg>
                     <h3>Весь парк в наличии</h3>
                 </div>
-                <p>В парке нашей компании представлены все возможные виды строительной техники для выполнения любых
+                <p>В парке нашей компании представлены все возможные виды строительной техники для выполнения любых
                     задач. </p>
             </div>
             <div class="advantage-card">
                 <div class="advantage-title">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1117_9623)">
                             <path
                                 d="M14.9068 2.14219C14.01 2.25156 13.7037 2.29531 13.1404 2.41015C10.8271 2.88593 8.49746 4.04531 6.80762 5.56015C4.18809 7.90625 2.65684 10.7445 2.13184 14.1953C1.99512 15.0922 1.99512 17.1047 2.13184 17.9687C2.65684 21.3102 4.01855 23.9898 6.29902 26.1664C8.21309 27.993 10.4061 29.1797 12.949 29.7594C13.2717 29.8305 13.6271 29.8906 13.742 29.8906C14.3053 29.8852 14.8521 29.3383 14.8521 28.7695C14.8521 28.4086 14.5732 27.9492 14.2451 27.7852C14.1631 27.7414 13.8568 27.6539 13.5561 27.5883C9.0334 26.6148 5.5334 23.1258 4.54355 18.5977C4.34668 17.7062 4.28652 17.0664 4.28652 16C4.28652 14.2062 4.64199 12.6531 5.42402 11.0289C7.15762 7.43047 10.4771 5.03515 14.524 4.45547C15.2186 4.35703 16.9467 4.37344 17.6686 4.48281C19.2982 4.73437 20.6873 5.2375 22.06 6.05781L22.5084 6.32578L22.0162 7.04766C21.7482 7.4414 21.524 7.81875 21.524 7.8789C21.524 7.94453 21.5732 8.04297 21.6334 8.09765C21.7373 8.19062 21.8139 8.19062 23.7225 8.02109C24.8162 7.92266 25.7732 7.83516 25.8607 7.81875C26.085 7.775 26.3256 7.54531 26.3639 7.3375C26.3912 7.20078 26.26 6.64844 25.8443 5.1664C25.5436 4.07265 25.2537 3.1375 25.2045 3.08281C25.0842 2.94609 24.9037 2.95703 24.767 3.10468C24.7068 3.17578 24.4771 3.4875 24.2584 3.80469C24.0396 4.12187 23.8428 4.40078 23.8209 4.42266C23.799 4.45 23.6459 4.38437 23.4873 4.28047C21.8904 3.25781 19.9709 2.54687 18.024 2.24609C17.4771 2.15859 15.3443 2.0875 14.9068 2.14219Z"
@@ -179,7 +202,7 @@
         </ul>
         <div class="card-list">
             <div class="card">
-                <img src="Macalac TBL 990.png">
+                <img class="image-card" src="Macalac TBL 990.png">
                 <h3 class="card-title">Mecalac TLB 990</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -198,7 +221,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="New Holland B100 B.png">
+                <img class="image-card" src="New Holland B100 B.png">
                 <h3 class="card-title">New Holland B100 B</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -217,7 +240,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="JCB 4CX.png">
+                <img class="image-card" src="JCB 4CX.png">
                 <h3 class="card-title">JCB 4CX</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -236,7 +259,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="JCB 3CX.png">
+                <img class="image-card" src="JCB 3CX.png">
                 <h3 class="card-title">JCB 3CX</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -255,7 +278,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="JCB 3CX super.png">
+                <img class="image-card" src="JCB 3CX super.png">
                 <h3 class="card-title">JCB 3CX Super</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -274,7 +297,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Volvo BL 71 B.png">
+                <img class="image-card" src="Volvo BL 71 B.png">
                 <h3 class="card-title">Volvo BL 71 B</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -293,7 +316,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Case 695 ST.png">
+                <img class="image-card" src="Case 695 ST.png">
                 <h3 class="card-title">Case 695 ST</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -312,7 +335,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Case 580 ST.png">
+                <img class="image-card" src="Case 580 ST.png">
                 <h3 class="card-title">Case 580 ST</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -331,7 +354,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Case 570 ST.png">
+                <img class="image-card" src="Case 570 ST.png">
                 <h3 class="card-title">Case 570 ST</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -350,7 +373,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Cat 424.png">
+                <img class="image-card" src="Cat 424.png">
                 <h3 class="card-title">Cat 424</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -369,7 +392,7 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
             <div class="card">
-                <img src="Cat 434.png">
+                <img class="image-card" src="Cat 434.png">
                 <h3 class="card-title">Cat 434</h3>
                 <div class="card-info">
                     <h5>Масса:</h5>
@@ -388,18 +411,18 @@
                 <button class="button3" onclick="openModal()">Заказать</button>
             </div>
         </div>
-        <h2>Отзывы клиентов</h2>
+    <h2 id="reviews">Отзывы клиентов</h2>
         <ul class="tags-list">
             <li class="tag" data-filter="all" id="all-reviews">Все отзывы</li>
-            <li class="tag" data-filter="avito"><img src="avito.png"> 4.7</li>
-            <li class="tag" data-filter="2gis"><img src="2gis.png"> 5.0</li>
-            <li class="tag" data-filter="yandex"><img src="yandex maps.png"> 5.0</li>
+            <li class="tag" data-filter="avito"><img src="avito.png">4.7</li>
+            <li class="tag" data-filter="2gis"><img src="2gis.png">5.0</li>
+            <li class="tag" data-filter="yandex"><img src="yandex maps.png">5.0</li>
         </ul>
         <div class="review">
             <div class="rating">
                 <div class="rating-items">
                     <h4>4.9 из 5</h4>
-                    <svg width="136" height="24" viewBox="0 0 136 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="star" viewBox="0 0 136 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z"
                             fill="#FFC470" />
@@ -445,7 +468,7 @@
                         <span class="name">Владимир Богданов</span>
                     </div>
                     <div class="comment-container">
-                        <span class="date">6 марта 2024</span>
+                        <span class="date" id="date">6 марта 2024</span>
                         <div class="card-rating">
                             <svg width="88" height="16" viewBox="0 0 88 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1313,6 +1336,12 @@
 
         function goToLink(url) {
             window.open(url, '_blank');
+        }
+
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
         }
 
     </script>
