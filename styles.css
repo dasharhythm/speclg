@@ -141,7 +141,7 @@ a:hover {
 
 .banner {
     margin-top: 32px;
-    background-image: url(Banner.png);
+    background-image: url(assets/Banner.png);
     height: 600px;
     padding: 56px 56px 96px;
     display: flex;
