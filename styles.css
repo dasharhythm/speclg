@@ -810,7 +810,7 @@ textarea {
     margin-bottom: 24px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 600px) {
     body {
         font-size: 14px;
         line-height: 19px;
