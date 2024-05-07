@@ -1021,7 +1021,7 @@ textarea {
 
     .tags-list {
         gap: 8px;
-        margin: 20px 0 12px 20px;
+        margin: 20px 0 16px 20px;
     }
 
     .tags-list li {
@@ -1058,7 +1058,7 @@ textarea {
     .card-rating-mob {
         display: flex;
         flex-direction: column;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .card-name {
@@ -1077,7 +1077,7 @@ textarea {
     }
 
     .rating {
-        margin: 8px 0 4px;
+        margin: 4px 0 4px;
         align-items: center;
         display: flex;
         gap: 8px;
@@ -1113,82 +1113,81 @@ textarea {
     .comment {
         color: #636366;
         line-height: 17px;
-        height: 66px;
-        max-height: 66px;
+        height: 82px;
+        max-height: 82px;
     }
 
     .link {
         text-decoration-line: underline;
         font-weight: 400;
-        color: #1047B0;
+        height: 40px;
     }
 
     .carousel {
         display: flex;
         overflow-x: auto;
-        margin: 0 -4px;
+        margin: 16px 10px 0;
         scroll-snap-type: x mandatory;
         /* Для привязки к элементам при скролле */
         -webkit-overflow-scrolling: touch;
         /* Улучшение прокрутки на мобильных устройствах */
-        padding: 0 0 12px 20px;
     }
-
-
+    
+    
     /* Стиль для элементов внутри карусели */
     .slide {
-        min-width: 350px;
-        margin-right: 16px;
-        padding: 8px;
+        display: inline-block;
+        scroll-snap-align: start;
+        padding: 12px;
     }
-
+    
     .carousel .slide {
         display: none;
         /* По умолчанию скрываем слайды */
     }
-
+    
     .carousel .slide.show {
         display: inline-block;
         /* Показываем слайды, которые должны быть видимыми */
     }
-
+    
     .no-scrollbar {
-
+    
         overflow-y: auto;
         /* Позволяет вертикальную прокрутку */
         scrollbar-width: none;
         /* Скрывает полосу прокрутки в Firefox */
     }
-
+    
     .no-scrollbar::-webkit-scrollbar {
         display: none;
         /* Скрывает полосу прокрутки в Chrome и Safari */
     }
-
+    
     .indicators {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 16px;
+        padding: 4px 0 64px;
     }
-
+    
     .indicator {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         background-color: #D8D8D9;
         border-radius: 50%;
-        margin: 0 4px;
+        margin: 0 2px;
         cursor: pointer;
         transition: background-color 0.3s;
         /* Плавный переход при изменении цвета */
     }
-
+    
     .indicator.active {
         background-color: #1047B0;
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
     }
-
+    
 
 
 
