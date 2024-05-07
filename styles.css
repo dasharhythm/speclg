@@ -67,13 +67,13 @@ h5 {
 
 .contacts-item {
     display: flex;
-    gap: 2px;
+    gap: 4px;
 }
 
 .contacts-item1 {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
     padding-top: 7px;
 }
 
@@ -583,7 +583,6 @@ sup {
     margin-top: 200px;
     padding: 40px;
     width: 334px;
-    height: 352px;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
     border-radius: 4px;
@@ -861,13 +860,7 @@ textarea {
         display: none;
     }
 
-    .contacts-item {
-        display: none;
-    }
-
-    .contacts-item1 {
-        display: none;
-    }
+   
 
     .page-header button {
         display: none;
@@ -1133,7 +1126,6 @@ textarea {
         /* Улучшение прокрутки на мобильных устройствах */
     }
     
-    
     /* Стиль для элементов внутри карусели */
     .slide {
         display: inline-block;
@@ -1165,28 +1157,39 @@ textarea {
     }
     
     .indicators {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4px 0 64px;
+        padding: 4px 0 52px;
     }
     
     .indicator {
         width: 6px;
         height: 6px;
-        background-color: #D8D8D9;
-        border-radius: 50%;
         margin: 0 2px;
-        cursor: pointer;
-        transition: background-color 0.3s;
         /* Плавный переход при изменении цвета */
     }
     
     .indicator.active {
-        background-color: #1047B0;
         width: 8px;
         height: 8px;
     }
+
+    .contact-container {
+        position: static;
+        margin: 0 20px 24px;
+        padding: 32px;
+        width: 350px;
+    }
+    
+    .contacts-col-contaiter {
+        gap: 4px;
+        margin: 20px 0;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+
+    
     
 
 
