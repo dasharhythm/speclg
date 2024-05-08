@@ -5,9 +5,25 @@ let slideWidth = slides[0].getBoundingClientRect().width;
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 let indicators = document.querySelectorAll('.indicator');
+let slideSize = 2; // По умолчанию считаем, что на декстопе
+
+const mediaQueryIsMobile = window.matchMedia("(max-width: 600px)");
+
+function refreshIndicators(event) {
+    const isMobile = event.matches
+    slideSize = isMobile ? 1 : 2;
+    createIndicators(slides.length / slideSize)
+    indicators = document.querySelectorAll('.indicator'); // Обновляем массив индикаторов
+
+}
+
+// Добавляем слушателя на изменения
+mediaQueryIsMobile.addEventListener("change", refreshIndicators);
+refreshIndicators(mediaQueryIsMobile);
 
 // Текущий индекс
 let currentIndex = 0;
+
 
 // Функция для создания индикаторов
 function createIndicators(slidesToShow) {
@@ -22,7 +38,7 @@ function createIndicators(slidesToShow) {
             indicator.classList.add('active'); // Первый индикатор активный
         }
         indicator.addEventListener('click', () => {
-            goToSlide(i * 2); // Переход к первому слайду в паре
+            goToSlide(i * slideSize); // Переход к первому слайду в паре
         });
         indicatorContainer.appendChild(indicator);
     }
@@ -33,7 +49,7 @@ function createIndicators(slidesToShow) {
 // Функция для установки активного индикатора
 function setActiveIndicator(index) {
     indicators.forEach((indicator, i) => {
-        if (i === Math.floor(index / 2)) {
+        if (i === Math.floor(index / slideSize)) {
             indicator.classList.add('active');
         } else {
             indicator.classList.remove('active');
@@ -51,13 +67,13 @@ function goToSlide(index) {
 // Обработчики для кнопок "назад" и "вперед"
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
-        goToSlide(Math.max(currentIndex - 2, 0));
+        goToSlide(Math.max(currentIndex - slideSize, 0));
     }
 });
 
 nextButton.addEventListener('click', () => {
-    if (currentIndex < slides.length - 2) {
-        goToSlide(Math.min(currentIndex + 2, slides.length - 2));
+    if (currentIndex < slides.length - slideSize) {
+        goToSlide(Math.min(currentIndex + slideSize, slides.length - slideSize));
     }
 });
 
@@ -89,7 +105,7 @@ document.querySelectorAll('.tag').forEach((btn) => {
         carousel.scrollTo({ left: 0, behavior: 'smooth' });
 
         // Обновляем индикаторы и текущий индекс
-        createIndicators(visibleSlides / 2); // Создаем индикаторы для видимых слайдов
+        createIndicators(visibleSlides / slideSize); // Создаем индикаторы для видимых слайдов
         currentIndex = 0; // Начинаем с первого видимого слайда
         setActiveIndicator(currentIndex);
     });
