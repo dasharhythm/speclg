@@ -612,6 +612,11 @@ sup {
     margin: 28px 0 32px;
 }
 
+.map {
+    width: 100%;
+    height: 600px;
+}
+
 
 @keyframes pulse {
     0% {
@@ -832,8 +837,8 @@ textarea {
 @media (max-width: 1200px) {
     .page {
         min-width: 900px;
-        margin: 0 auto 100px;
-        padding: 0 72px;
+        margin: 0 auto 20px;
+        padding: 0 40px;
     }
     .page-header {
         display: flex;
@@ -911,7 +916,7 @@ textarea {
 
     .page-header {
         display: flex;
-        padding: 28px 20px 10px;
+        padding: 20px;
         align-items: center;
         justify-content: space-between;
     }
@@ -957,6 +962,7 @@ textarea {
         background-size: cover; /* Заполнение контейнера, сохраняя пропорции */
         background-position: center; /* Центрирование фонового изображения */
         background-repeat: no-repeat; /* Без повторения */
+        margin-top: 0;
     }
     
     .banner .inner {
@@ -1038,7 +1044,7 @@ textarea {
 
     .card {
         width: 100%;
-        padding: 20px 32px 24px 32px;
+        padding: 32px;
     }
 
     .image-card {
@@ -1277,8 +1283,10 @@ textarea {
         margin: 20px 0;
     }
 
-   
-    
+    .map {
+        height: 350px;
+    }
+
     .social-networks {
         gap: 12px;
     }
@@ -1286,7 +1294,6 @@ textarea {
     .social-network {
         scale: 0.727;
     }
-
 
     footer {
         display: none;
