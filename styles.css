@@ -140,16 +140,29 @@ a:hover {
 }
 
 .banner {
+    position: relative; /* Для позиционирования внутреннего контента */
+    width: 100%; /* Контейнер занимает всю ширину */
     margin-top: 32px;
+    padding-bottom: 46.3%; /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
     background-image: url(assets/Banner.png);
-    height: 600px;
-    padding: 56px 56px 96px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-position: center;
-    background-size: cover;
+    background-size: cover; /* Заполнение контейнера, сохраняя пропорции */
+    background-position: center; /* Центрирование фонового изображения */
+    background-repeat: no-repeat; /* Без повторения */
 }
+
+.banner .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 56px 56px 7.4%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 
 .text {
     width: 973px;
@@ -287,6 +300,10 @@ a:hover {
     box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
     border-radius: 4px;
     padding: 24px 24px 32px 24px;
+}
+
+.image-card {
+width: 100%;
 }
 
 .card-title {
@@ -809,6 +826,55 @@ textarea {
     margin-bottom: 24px;
 }
 
+
+
+
+@media (max-width: 1200px) {
+    .page {
+        min-width: 900px;
+        margin: 0 auto 100px;
+        padding: 0 72px;
+    }
+    .page-header {
+        display: flex;
+        padding: 28px 20px 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .contacts {
+        display: none;
+    }
+
+    .page-header button {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        background: white;
+        padding: 24px;
+        right: 0;
+        transform: translateX(-100%);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    }
+
+
+
+
 @media (max-width: 600px) {
     body {
         font-size: 14px;
@@ -838,7 +904,6 @@ textarea {
     }
 
     .page {
-        max-width: 390px;
         min-width: 390px;
         padding: 0;
         margin: 0;
@@ -859,8 +924,6 @@ textarea {
     .contacts {
         display: none;
     }
-
-   
 
     .page-header button {
         display: none;
@@ -885,10 +948,28 @@ textarea {
         display: none;
     }
 
+
     .banner {
-        margin-top: 0;
-        height: 220px;
-        padding: 16px 20px 20px;
+        position: relative; /* Для позиционирования внутреннего контента */
+        width: 100%; /* Контейнер занимает всю ширину */
+        padding-bottom: 56.4%; /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+        background-image: url(assets/Banner.png);
+        background-size: cover; /* Заполнение контейнера, сохраняя пропорции */
+        background-position: center; /* Центрирование фонового изображения */
+        background-repeat: no-repeat; /* Без повторения */
+    }
+    
+    .banner .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    
+        padding: 7.3% 20px 9.01%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
     }
 
     .text {
@@ -956,13 +1037,12 @@ textarea {
     }
 
     .card {
-        width: 350px;
+        width: 100%;
         padding: 20px 32px 24px 32px;
     }
 
     .image-card {
-        width: 286px;
-        height: 145px;
+        width: 100%;
         object-fit: cover;
     }
 
@@ -996,7 +1076,7 @@ textarea {
 
     .button3 {
         padding: 0 0;
-        width: 286px;
+        width: 100%;
         height: 40px;
     }
 
@@ -1014,9 +1094,12 @@ textarea {
 
     .tags-list {
         gap: 8px;
-        margin: 20px 0 16px 20px;
+        margin: 20px 0 16px;
+        overflow-x: auto; /* Позволяет горизонтальную прокрутку */
+        white-space: nowrap; /* Предотвращает перенос строк */
     }
 
+    
     .tags-list li {
         gap: 4px;
         padding: 8px 12px;
@@ -1025,6 +1108,15 @@ textarea {
         height: 33px;
 
     }
+
+    .tags-list li:first-child {
+        margin-left: 20px;
+    }
+
+    .tags-list li:last-child {
+        margin-right: 20px;
+    }
+
 
     .tag img {
         height: 24px;
@@ -1039,7 +1131,7 @@ textarea {
     }
 
     .card-review {
-        width: 350px;
+        flex: 1 0 100%;
         height: 264px;
         padding: 20px;
     }
@@ -1139,7 +1231,8 @@ textarea {
     }
     
     .carousel .slide.show {
-        display: inline-block;
+        display: inline-flex;
+        width: 100%;
         /* Показываем слайды, которые должны быть видимыми */
     }
     
@@ -1176,7 +1269,7 @@ textarea {
         position: static;
         margin: 0 20px 24px;
         padding: 32px;
-        width: 350px;
+        width: calc(100% - 40px);
     }
     
     .contacts-col-contaiter {
@@ -1184,12 +1277,20 @@ textarea {
         margin: 20px 0;
     }
 
-    .map {
-        height: 400px;
+   
+    
+    .social-networks {
+        gap: 12px;
+    }
+
+    .social-network {
+        scale: 0.727;
     }
 
 
-    
+    footer {
+        display: none;
+    }
     
 
 
