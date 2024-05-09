@@ -143,3 +143,23 @@ function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 }
+
+
+
+
+
+
+const dropdown = document.querySelector('.dropdown');
+const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+
+// Открытие/закрытие дропдауна при клике на кнопку
+dropdownToggle.addEventListener('click', () => {
+    dropdown.classList.toggle('open'); // Переключаем класс 'open'
+});
+
+// Закрытие дропдауна при клике вне его
+document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('open'); // Закрыть, если клик вне дропдауна
+    }
+});
