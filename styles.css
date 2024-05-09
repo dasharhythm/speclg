@@ -45,7 +45,8 @@ h5 {
 
 .page {
     max-width: 1440px;
-    min-width: 1440px;
+    min-width: 1200px;
+    width: 100%;
     margin: 0 auto 100px;
     padding: 0 72px;
 }
@@ -140,14 +141,20 @@ a:hover {
 }
 
 .banner {
-    position: relative; /* Для позиционирования внутреннего контента */
-    width: 100%; /* Контейнер занимает всю ширину */
+    position: relative;
+    /* Для позиционирования внутреннего контента */
+    width: 100%;
+    /* Контейнер занимает всю ширину */
     margin-top: 32px;
-    padding-bottom: 46.3%; /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+    padding-bottom: 46.3%;
+    /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
     background-image: url(assets/Banner.png);
-    background-size: cover; /* Заполнение контейнера, сохраняя пропорции */
-    background-position: center; /* Центрирование фонового изображения */
-    background-repeat: no-repeat; /* Без повторения */
+    background-size: cover;
+    /* Заполнение контейнера, сохраняя пропорции */
+    background-position: center;
+    /* Центрирование фонового изображения */
+    background-repeat: no-repeat;
+    /* Без повторения */
 }
 
 .banner .inner {
@@ -303,7 +310,7 @@ a:hover {
 }
 
 .image-card {
-width: 100%;
+    width: 100%;
 }
 
 .card-title {
@@ -707,6 +714,14 @@ hr {
     cursor: pointer;
 }
 
+summary {
+    display: none;
+}
+
+details {
+    display: none;
+}
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -840,6 +855,7 @@ textarea {
         margin: 0 auto 20px;
         padding: 0 40px;
     }
+
     .page-header {
         display: flex;
         padding: 28px 20px 10px;
@@ -875,7 +891,19 @@ textarea {
         display: none;
     }
 
+    footer {
+        display: flex;
     }
+
+    .footer-container {
+        display: none;
+    }
+
+    .footer-container-mob {
+        margin-top: 12px;
+    }
+
+}
 
 
 
@@ -955,23 +983,29 @@ textarea {
 
 
     .banner {
-        position: relative; /* Для позиционирования внутреннего контента */
-        width: 100%; /* Контейнер занимает всю ширину */
-        padding-bottom: 56.4%; /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+        position: relative;
+        /* Для позиционирования внутреннего контента */
+        width: 100%;
+        /* Контейнер занимает всю ширину */
+        padding-bottom: 56.4%;
+        /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
         background-image: url(assets/Banner.png);
-        background-size: cover; /* Заполнение контейнера, сохраняя пропорции */
-        background-position: center; /* Центрирование фонового изображения */
-        background-repeat: no-repeat; /* Без повторения */
+        background-size: cover;
+        /* Заполнение контейнера, сохраняя пропорции */
+        background-position: center;
+        /* Центрирование фонового изображения */
+        background-repeat: no-repeat;
+        /* Без повторения */
         margin-top: 0;
     }
-    
+
     .banner .inner {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-    
+
         padding: 7.3% 20px 9.01%;
         display: flex;
         justify-content: space-between;
@@ -1101,11 +1135,13 @@ textarea {
     .tags-list {
         gap: 8px;
         margin: 20px 0 16px;
-        overflow-x: auto; /* Позволяет горизонтальную прокрутку */
-        white-space: nowrap; /* Предотвращает перенос строк */
+        overflow-x: auto;
+        /* Позволяет горизонтальную прокрутку */
+        white-space: nowrap;
+        /* Предотвращает перенос строк */
     }
 
-    
+
     .tags-list li {
         gap: 4px;
         padding: 8px 12px;
@@ -1223,49 +1259,49 @@ textarea {
         -webkit-overflow-scrolling: touch;
         /* Улучшение прокрутки на мобильных устройствах */
     }
-    
+
     /* Стиль для элементов внутри карусели */
     .slide {
         display: inline-block;
         scroll-snap-align: start;
         padding: 12px;
     }
-    
+
     .carousel .slide {
         display: none;
         /* По умолчанию скрываем слайды */
     }
-    
+
     .carousel .slide.show {
         display: inline-flex;
         width: 100%;
         /* Показываем слайды, которые должны быть видимыми */
     }
-    
+
     .no-scrollbar {
-    
+
         overflow-y: auto;
         /* Позволяет вертикальную прокрутку */
         scrollbar-width: none;
         /* Скрывает полосу прокрутки в Firefox */
     }
-    
+
     .no-scrollbar::-webkit-scrollbar {
         display: none;
         /* Скрывает полосу прокрутки в Chrome и Safari */
     }
-    
+
     .indicators {
         padding: 4px 0 52px;
     }
-    
+
     .indicator {
         width: 6px;
         height: 6px;
         margin: 0 2px;
         /* Плавный переход при изменении цвета */
     }
-    
+
     .indicator.active {
         width: 8px;
         height: 8px;
@@ -1277,7 +1313,7 @@ textarea {
         padding: 32px;
         width: calc(100% - 40px);
     }
-    
+
     .contacts-col-contaiter {
         gap: 4px;
         margin: 20px 0;
@@ -1307,34 +1343,40 @@ textarea {
         margin-top: 12px;
     }
 
-summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer; /* Указатель при наведении */
-    padding: 8px 0;
-}
+    summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        /* Указатель при наведении */
+        padding: 8px 0;
+        -webkit-appearance: none; /* Скрытие стандартного вида */
+        appearance: none; 
+    }
 
-/* Контент внутри details */
-details {
-    width: 100%;
-    margin: 0 20px;
-    padding:8px 0;
-    border-bottom: 0.5px solid #D8D8D9; /* Добавляем границу */
-}
+    /* Контент внутри details */
+    details {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        padding: 8px 0;
+        border-bottom: 0.5px solid #D8D8D9;
+        /* Добавляем границу */
+    }
 
-details summary {
-    text-align: left;
-    list-style: none;
-    list-style-type: none; /* Убираем маркеры */
-    -webkit-appearance: none; /* Скрываем стрелку в WebKit-браузерах (Chrome, Safari) */
-    appearance: none; /* Скрываем стрелку во всех других браузерах */
-}
+    details summary {
+        text-align: left;
+        list-style: none;
+        list-style-type: none;
+        /* Убираем маркеры */
+        -webkit-appearance: none;
+        /* Скрываем стрелку в WebKit-браузерах (Chrome, Safari) */
+        appearance: none;
+        /* Скрываем стрелку во всех других браузерах */
+    }
 
 
-summary::marker {
-    display: none;
-}
-
+    summary::marker {
+        content: ""; /* Удаление стандартного маркера */
+    }   
 
 }
