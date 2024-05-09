@@ -1356,6 +1356,7 @@ textarea {
 
     /* Контент внутри details */
     details {
+        display: flex;
         width: calc(100% - 40px);
         margin: 0 20px;
         padding: 8px 0;
@@ -1378,5 +1379,9 @@ textarea {
     summary::marker {
         content: ""; /* Удаление стандартного маркера */
     }   
+
+    hr {
+        display: none;
+    }
 
 }
