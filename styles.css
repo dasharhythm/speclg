@@ -1317,24 +1317,20 @@ summary {
 
 /* Контент внутри details */
 details {
-    width: calc(100% - 40px);
+    width: 100%;
     margin: 0 20px;
     padding:8px 0;
     border-bottom: 0.5px solid #D8D8D9; /* Добавляем границу */
 }
 
 details summary {
+    text-align: left;
+    list-style: none;
     list-style-type: none; /* Убираем маркеры */
     -webkit-appearance: none; /* Скрываем стрелку в WebKit-браузерах (Chrome, Safari) */
     appearance: none; /* Скрываем стрелку во всех других браузерах */
 }
 
-/* Дополнительная стилизация */
-
-/* Стиль для контента внутри details */
-details > p {
-    margin: 20px 0;
-}
 
 summary::marker {
     display: none;
