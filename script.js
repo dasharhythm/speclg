@@ -147,19 +147,16 @@ function toggleMenu() {
 
 
 
+// Находим все заголовки аккордеона
+const accordionTitles = document.querySelectorAll('.accordion-title');
 
-
-const dropdown = document.querySelector('.dropdown');
-const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-// Открытие/закрытие дропдауна при клике на кнопку
-dropdownToggle.addEventListener('click', () => {
-    dropdown.classList.toggle('open'); // Переключаем класс 'open'
-});
-
-// Закрытие дропдауна при клике вне его
-document.addEventListener('click', (event) => {
-    if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove('open'); // Закрыть, если клик вне дропдауна
-    }
+// Добавляем обработчик клика для каждого заголовка
+accordionTitles.forEach((title) => {
+    title.addEventListener('click', () => {
+        // Получаем родительский элемент (секцию аккордеона)
+        const section = title.parentElement;
+        
+        // Переключаем класс 'open' для открытия/закрытия контента
+        section.classList.toggle('open');
+    });
 });

@@ -668,6 +668,10 @@ footer {
     justify-content: space-between;
 }
 
+.footer-container-mob {
+    display: none;
+}
+
 .link-heading {
     height: 28px;
     margin-top: 56px;
@@ -852,6 +856,7 @@ textarea {
 @media (max-width: 1200px) {
     .page {
         min-width: 900px;
+        width: 100%;
         margin: 0 auto 20px;
         padding: 0 40px;
     }
@@ -889,6 +894,17 @@ textarea {
 
     .menu {
         display: none;
+    }
+
+    .text {
+        font-size: 40px;
+        line-height: 48px;
+        width: 100%;
+    }
+
+    .advantage-list {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     footer {
@@ -1340,45 +1356,39 @@ textarea {
     }
 
     .footer-container-mob {
+        display: block;
         margin-top: 12px;
     }
 
-    summary {
+    .accordion {
+        margin: 20px 20px 0;
+    }
+    
+    /* Заголовки аккордеона */
+    .accordion-title {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        /* Указатель при наведении */
-        padding: 8px 0;
-        -webkit-appearance: none; /* Скрытие стандартного вида */
-        appearance: none; 
+        cursor: pointer; /* Указатель при наведении */
+        padding: 10px;
+        border-bottom: 0.5px solid #B5B6B9;
     }
 
-    /* Контент внутри details */
-    details {
-        display: flex;
-        width: calc(100% - 40px);
-        margin: 0 20px;
-        padding: 8px 0;
-        border-bottom: 0.5px solid #D8D8D9;
-        /* Добавляем границу */
+    .accordion-title::after {
+        content: ' ' ;
+        width: 20px;
+        background-image: url(assets/Dropdown.svg);
     }
 
-    details summary {
-        text-align: left;
-        list-style: none;
-        list-style-type: none;
-        /* Убираем маркеры */
-        -webkit-appearance: none;
-        /* Скрываем стрелку в WebKit-браузерах (Chrome, Safari) */
-        appearance: none;
-        /* Скрываем стрелку во всех других браузерах */
+    /* Контент аккордеона (скрыт по умолчанию) */
+    .accordion-content {
+        display: none; /* Скрыть контент по умолчанию */
+        padding: 10px; /* Отступы внутри контента */
     }
-
-
-    summary::marker {
-        content: ""; /* Удаление стандартного маркера */
-    }   
+    
+    /* Стиль для развернутой секции */
+    .accordion-section.open .accordion-content {
+        display: block; /* Показать контент при развертывании */
+    }
 
     hr {
         display: none;
