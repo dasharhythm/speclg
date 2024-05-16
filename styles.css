@@ -670,6 +670,9 @@ footer {
 .footer-container-mob {
     display: none;
 }
+.footer-container-mob1 {
+    display: none;
+}
 
 .link-heading {
     height: 28px;
@@ -1396,7 +1399,7 @@ textarea {
     .footer-container-mob1 { 
         display: flex;
         justify-content: space-between;  
-        margin: 20px;
+        margin: 20px 20px 80px;
         padding-top: 12px;
         border-top: 0.5px solid #B5B6B9;
 
