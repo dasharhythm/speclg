@@ -659,7 +659,6 @@ sup {
 footer {
     display: flex;
     background-color: #F6F8FC;
-    height: 462px;
 }
 
 .footer-container {
@@ -718,12 +717,8 @@ hr {
     cursor: pointer;
 }
 
-summary {
-    display: none;
-}
-
-details {
-    display: none;
+.icon {
+    flex-shrink: 0;
 }
 
 .modal-overlay {
@@ -907,6 +902,14 @@ textarea {
         flex-wrap: wrap;
     }
 
+    .advantage-card {
+        width: 100%;
+    }
+
+    .chip-list {
+        display: flex;
+    }
+
     footer {
         display: flex;
     }
@@ -916,7 +919,58 @@ textarea {
     }
 
     .footer-container-mob {
+        display: block;
         margin-top: 12px;
+    }
+
+    .accordion {
+        margin: 20px 20px 0;
+    }
+    
+    /* Заголовки аккордеона */
+    .accordion-title {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer; /* Указатель при наведении */
+        padding: 16px 0;
+        border-bottom: 0.5px solid #B5B6B9;
+    }
+
+    .accordion-title::after {
+        content: ' ' ;
+        width: 20px;
+        background-image: url(assets/Dropdown.svg);
+        background-repeat: no-repeat;
+        background-position: right center; /* Положение иконки */
+        transition: transform 0.3s ease; /* Анимация перехода */
+    }
+
+/* При добавлении класса 'open' к .accordion-header, иконка поворачивается на 90 градусов */
+    .accordion-title.open::after {
+        transform: rotate(-90deg);
+    }
+
+    /* Контент аккордеона (скрыт по умолчанию) */
+    .accordion-content {
+        display: none; /* Скрыть контент по умолчанию */
+        padding: 10px; /* Отступы внутри контента */
+    }
+    
+    /* Стиль для развернутой секции */
+    .accordion-section.open .accordion-content {
+        display: block; /* Показать контент при развертывании */
+    }
+
+    .link-heading {
+        margin-top: 24px;
+    }
+
+    .icon {
+        flex-shrink: 0;
+    }
+
+    hr {
+      display: none;  
     }
 
 }
@@ -1077,10 +1131,6 @@ textarea {
         gap: 8px;
     }
 
-    .icon {
-        scale: 0.625;
-    }
-
     .chip-list {
         display: none;
     }
@@ -1156,7 +1206,6 @@ textarea {
         white-space: nowrap;
         /* Предотвращает перенос строк */
     }
-
 
     .tags-list li {
         gap: 4px;
@@ -1343,55 +1392,14 @@ textarea {
         gap: 12px;
     }
 
-    .social-network {
-        scale: 0.727;
-    }
 
-    footer {
+    .footer-container-mob1 { 
         display: flex;
-    }
+        justify-content: space-between;  
+        margin: 20px;
+        padding-top: 12px;
+        border-top: 0.5px solid #B5B6B9;
 
-    .footer-container {
-        display: none;
-    }
-
-    .footer-container-mob {
-        display: block;
-        margin-top: 12px;
-    }
-
-    .accordion {
-        margin: 20px 20px 0;
-    }
-    
-    /* Заголовки аккордеона */
-    .accordion-title {
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer; /* Указатель при наведении */
-        padding: 10px;
-        border-bottom: 0.5px solid #B5B6B9;
-    }
-
-    .accordion-title::after {
-        content: ' ' ;
-        width: 20px;
-        background-image: url(assets/Dropdown.svg);
-    }
-
-    /* Контент аккордеона (скрыт по умолчанию) */
-    .accordion-content {
-        display: none; /* Скрыть контент по умолчанию */
-        padding: 10px; /* Отступы внутри контента */
-    }
-    
-    /* Стиль для развернутой секции */
-    .accordion-section.open .accordion-content {
-        display: block; /* Показать контент при развертывании */
-    }
-
-    hr {
-        display: none;
     }
 
 }

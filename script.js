@@ -160,3 +160,9 @@ accordionTitles.forEach((title) => {
         section.classList.toggle('open');
     });
 });
+
+document.querySelectorAll('.accordion-title').forEach((header) => {
+    header.addEventListener('click', () => {
+        header.classList.toggle('open');
+    });
+});
