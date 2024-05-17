@@ -1462,6 +1462,9 @@ textarea {
         max-height: 100px;
         width: 100%;
         padding: 12px;
+        -webkit-text-size-adjust: 100%; / Для Safari и Chrome /
+        -ms-text-size-adjust: 100%; / Для IE Mobile /
+        text-size-adjust: 100%; / Для Firefox и других */
     }
     
     textarea {
