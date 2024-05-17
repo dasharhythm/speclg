@@ -833,7 +833,7 @@ textarea {
     background: #1859D7;
 }
 
-#checkbox {
+.checkbox {
     width: 18px;
     height: 18px;
     border: 1.5px solid #3A3A3C;
@@ -851,8 +851,6 @@ textarea {
     margin-top: 20px;
     margin-bottom: 24px;
 }
-
-
 
 
 @media (max-width: 1200px) {
@@ -1481,7 +1479,7 @@ textarea {
         height: 40px;
     }
     
-    #checkbox {
+    .checkbox {
         width: 12px;
         height: 12px;
         border: 1px solid #3A3A3C;
@@ -1498,6 +1496,8 @@ textarea {
         flex-direction: row;
         margin-top: 20px;
         margin-bottom: 24px;
+        align-items: baseline;
+        gap: 2px;
     }
 
 }
