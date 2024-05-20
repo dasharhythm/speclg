@@ -7,7 +7,7 @@ const nextButton = document.querySelector('.next');
 let indicators = document.querySelectorAll('.indicator');
 let slideSize = 2; // По умолчанию считаем, что на декстопе
 
-const mediaQueryIsMobile = window.matchMedia("(max-width: 600px)");
+const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
 
 function refreshIndicators(event) {
     const isMobile = event.matches
