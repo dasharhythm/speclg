@@ -140,10 +140,13 @@ function goToLink(url) {
 
 
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    const menuItems = document.querySelector('.menu-items');
+    const overlay = document.querySelector('.overlay');
+    const menuToggle = document.querySelector('.menu-toggle');
+    menuItems.classList.toggle('active');
+    overlay.classList.toggle('active');
+    menuToggle.classList.toggle('active');
 }
-
 
 
 
