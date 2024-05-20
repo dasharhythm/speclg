@@ -110,7 +110,7 @@
                         onclick="goToLink('https://api.whatsapp.com/send/?phone=79991185855&text&type=phone_number&app_absent=0')">Связаться с нами</button>
                     </div>
                 </div>
-                <div class="overlay" onclick="toggleMenu()"></div>
+                <div class="overlay hidden"  onclick="toggleMenu()"></div>
         </header>
         <div class="menu">
             <div class="menu-item">
@@ -1673,47 +1673,47 @@
                 </a>
             </div>
         </div>
-        <div class="modal-overlay">
-            <div class="modal">
-                <button class="modal-close" onclick="closeModal()">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.05752 7.05727C7.57822 6.53657 8.42244 6.53657 8.94313 7.05727L16.0003 14.1145L23.0575 7.05727C23.5782 6.53657 24.4224 6.53657 24.9431 7.05727C25.4638 7.57797 25.4638 8.42219 24.9431 8.94289L17.8859 16.0001L24.9431 23.0573C25.4638 23.578 25.4638 24.4222 24.9431 24.9429C24.4224 25.4636 23.5782 25.4636 23.0575 24.9429L16.0003 17.8857L8.94313 24.9429C8.42244 25.4636 7.57822 25.4636 7.05752 24.9429C6.53682 24.4222 6.53682 23.578 7.05752 23.0573L14.1147 16.0001L7.05752 8.94289C6.53682 8.42219 6.53682 7.57797 7.05752 7.05727Z"
-                            fill="#636366" />
-                    </svg>
-                </button>
-                <form class="modal-content">
-                    <h3 class="modal-heading1">Оставьте заявку на расчет</h3>
-                    <h4 class="modal-heading2">Мы рассчитаем стоимость аренды спецтехники и перезвоним Вам.</h4>
-                    <div class="modal-item">
-                        <label>Вид техники</label>
-                        <input type="text" value="Экскаваторы-погрузчики" readonly>
-                    </div>
-                    <div class="modal-item">
-                        <label>Ваше имя</label>
-                        <input type="text" name="username" placeholder="Василий">
-                    </div>
-                    <div class="modal-item">
-                        <label>Номер телефона</label>
-                        <input type="tel" id="phone" name="phone" required
-                            pattern="\+?\d{1,3}?\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}"
-                            placeholder="+7(999) 123-45-67">
-                    </div>
-                    <div class="modal-item">
-                        <label>Комментарий</label>
-                        <textarea type="text" name="comment" rows="3"
-                            placeholder="Параметры и описание работ"></textarea>
-                    </div>
-                    <div class="modal-item" id="modal-item">
-                        <input type="checkbox" class="checkbox" required>
-                        <h5 id="checkbox-text">Отправляя заявку, вы даете согласние на обработку
-                            персональных данных</h5>
-                    </div>
-                    <button class="submit-button" type="submit">Рассчитать</button>
-                </form>
-            </div>
-        </div>
     </footer>
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.05752 7.05727C7.57822 6.53657 8.42244 6.53657 8.94313 7.05727L16.0003 14.1145L23.0575 7.05727C23.5782 6.53657 24.4224 6.53657 24.9431 7.05727C25.4638 7.57797 25.4638 8.42219 24.9431 8.94289L17.8859 16.0001L24.9431 23.0573C25.4638 23.578 25.4638 24.4222 24.9431 24.9429C24.4224 25.4636 23.5782 25.4636 23.0575 24.9429L16.0003 17.8857L8.94313 24.9429C8.42244 25.4636 7.57822 25.4636 7.05752 24.9429C6.53682 24.4222 6.53682 23.578 7.05752 23.0573L14.1147 16.0001L7.05752 8.94289C6.53682 8.42219 6.53682 7.57797 7.05752 7.05727Z"
+                        fill="#636366" />
+                </svg>
+            </button>
+            <form class="modal-content">
+                <h3 class="modal-heading1">Оставьте заявку на расчет</h3>
+                <h4 class="modal-heading2">Мы рассчитаем стоимость аренды спецтехники и перезвоним Вам.</h4>
+                <div class="modal-item">
+                    <label>Вид техники</label>
+                    <input type="text" value="Экскаваторы-погрузчики" readonly>
+                </div>
+                <div class="modal-item">
+                    <label>Ваше имя</label>
+                    <input type="text" name="username" placeholder="Василий">
+                </div>
+                <div class="modal-item">
+                    <label>Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required
+                        pattern="\+?\d{1,3}?\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}"
+                        placeholder="+7(999) 123-45-67">
+                </div>
+                <div class="modal-item">
+                    <label>Комментарий</label>
+                    <textarea type="text" name="comment" rows="3"
+                        placeholder="Параметры и описание работ"></textarea>
+                </div>
+                <div class="modal-item" id="modal-item">
+                    <input type="checkbox" class="checkbox" required>
+                    <h5 id="checkbox-text">Отправляя заявку, вы даете согласние на обработку
+                        персональных данных</h5>
+                </div>
+                <button class="submit-button" type="submit">Рассчитать</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

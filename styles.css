@@ -898,16 +898,18 @@ textarea {
         transform: rotate(90deg);
     }
     
+
     .menu-items {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 30%;
+        width: 35%;
         height: 100%;
         background-color: white;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: right 0.3s ease;
+        transition: right 0.8s ease-in-out;
         display: flex;
+        z-index: 2;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -930,6 +932,27 @@ textarea {
         border-bottom: 0.5px solid #BBBBBB;
     }
     
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.8s ease-in-out;
+        z-index: 1;
+    }
+
+    .overlay.hidden {
+        display: none;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+    }
+
     .menu-button {
         padding: 10px 20px;
         width: calc(100% - 40px);
@@ -944,23 +967,7 @@ textarea {
         width: calc(100% - 40px);
         margin: 32px 20px 24px;
     }
-    
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        transition: opacity 0.3s ease;
-        z-index: 1;
-    }
-    
-    .overlay.active {
-        display: block;
-    }
-    
+        
     .menu-items.active {
         right: 0;
         z-index: 2;
@@ -1169,8 +1176,9 @@ textarea {
         height: 100%;
         background-color: white;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: right 0.3s ease;
+        transition: right 0.8s ease-in-out;
         display: flex;
+        z-index: 2;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1194,19 +1202,24 @@ textarea {
     }
     
     .overlay {
-        display: none;
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0;
         background: rgba(0, 0, 0, 0.5);
-        transition: opacity 0.8s ease-in-out;
+        transition: all 0.8s ease-in-out;
         z-index: 1;
+    }
+
+    .overlay.hidden {
+        display: none;
     }
     
     .overlay.active {
-        display: block;
+        opacity: 1;
     }
     
     .menu-items.active {
@@ -1584,7 +1597,7 @@ textarea {
     }
 
    .modal-overlay {
-        display: none;
+        z-index: 100;
 
     }
     
@@ -1595,6 +1608,7 @@ textarea {
         top: 0;
         left: 0;
         padding: 24px 20px 40px;
+       
     }
     
     .modal-close {

@@ -134,6 +134,7 @@ function closeModal() {
     overlay.style.display = 'none'; // Скрываем модалку
 }
 
+
 function goToLink(url) {
     window.open(url, '_blank');
 }
@@ -144,8 +145,15 @@ function toggleMenu() {
     const overlay = document.querySelector('.overlay');
     const menuToggle = document.querySelector('.menu-toggle');
     menuItems.classList.toggle('active');
-    overlay.classList.toggle('active');
-    menuToggle.classList.toggle('active');
+    overlay.classList.remove('hidden');
+
+    setTimeout(function callBack (){ overlay.classList.toggle('active');},0) 
+
+    const isActive = menuItems.classList.contains('active')
+    if (!isActive) {
+        setTimeout(function callBack (){overlay.classList.add('hidden')},300) 
+        
+    }
 }
 
 
