@@ -1053,6 +1053,23 @@ textarea {
       display: none;  
     }
 
+    .social-networks {
+        gap: 12px;
+    }
+
+    .item {
+        align-items: center;
+    }
+
+    .footer-container-mob1 { 
+        display: flex;
+        justify-content: space-between;  
+        margin: 20px 20px 80px;
+        padding-top: 12px;
+        border-top: 0.5px solid #B5B6B9;
+    }
+
+
 }
 
 @media (max-width: 899px) {
@@ -1074,6 +1091,10 @@ textarea {
 
     .menu-items {
         width: 50%;
+    }
+
+    .button-container {
+        display: none;
     }
 
 
