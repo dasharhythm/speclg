@@ -1048,7 +1048,7 @@ textarea {
     }
 
     .item {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .footer-container-mob1 {
@@ -1134,7 +1134,7 @@ textarea {
         }
 
         .page {
-            min-width: 390px;
+            min-width: 375px;
             padding: 0;
             margin: 0;
         }
@@ -1338,7 +1338,6 @@ textarea {
 
         .card-review {
             flex: 1 0 100%;
-            height: 264px;
             padding: 20px;
         }
 
