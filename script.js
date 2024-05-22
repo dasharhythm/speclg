@@ -147,12 +147,12 @@ function toggleMenu() {
     menuItems.classList.toggle('active');
     overlay.classList.remove('hidden');
 
-    setTimeout(function callBack (){ overlay.classList.toggle('active');},0) 
+    setTimeout(function callBack() { overlay.classList.toggle('active'); }, 0)
 
     const isActive = menuItems.classList.contains('active')
     if (!isActive) {
-        setTimeout(function callBack (){overlay.classList.add('hidden')},300) 
-        
+        setTimeout(function callBack() { overlay.classList.add('hidden') }, 300)
+
     }
 }
 
@@ -166,7 +166,7 @@ accordionTitles.forEach((title) => {
     title.addEventListener('click', () => {
         // Получаем родительский элемент (секцию аккордеона)
         const section = title.parentElement;
-        
+
         // Переключаем класс 'open' для открытия/закрытия контента
         section.classList.toggle('open');
     });
