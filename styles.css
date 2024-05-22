@@ -68,6 +68,7 @@ h5 {
 
 .contacts-item {
     display: flex;
+    align-items: flex-start;
     gap: 4px;
 }
 
@@ -694,6 +695,7 @@ footer {
     flex-direction: row;
     gap: 4px;
     margin-top: 12px;
+    align-items: flex-start;
 }
 
 #mail {
@@ -864,7 +866,7 @@ textarea {
 
     .page-header {
         display: flex;
-        padding: 28px 20px 10px;
+        padding: 28px 0 0 0;
         align-items: center;
         justify-content: space-between;
     }
@@ -890,7 +892,6 @@ textarea {
     .menu-toggle {
         cursor: pointer;
         font-size: 24px;
-        padding: 10px;
     }
 
     .menu-close {
@@ -1128,43 +1129,25 @@ textarea {
         width: 50%;
     }
 
+    .advantage-icon {
+        width: 20px;
+    }
+
     .button-container {
         display: none;
+    }
+
+    #rating-icon {
+        width: 88px;
     }
 
 
 
 @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        line-height: 19px;
-    }
-
+    
     h1 {
         font-size: 19px;
         line-height: 24px;
-    }
-
-    h2 {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    h3 {
-        font-size: 17px;
-        line-height: 22px;
-    }
-
-    h4 {
-        font-size: 14px;
-        line-height: 17px;
-    }
-
-    h5 {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 16px;
     }
 
     .page {
@@ -1349,7 +1332,6 @@ textarea {
         font-weight: 500;
         font-size: 14px;
         height: 33px;
-
     }
 
     .tags-list li:first-child {
@@ -1542,7 +1524,6 @@ textarea {
 
    .modal-overlay {
         z-index: 100;
-
     }
     
     .modal {
@@ -1551,8 +1532,7 @@ textarea {
         background: #FFFFFF;
         top: 0;
         left: 0;
-        padding: 24px 20px 40px;
-       
+        padding: 24px 20px 40px;  
     }
     
     .modal-close {
@@ -1600,8 +1580,7 @@ textarea {
     textarea {
         height: 100px;
         width: 100%;
-        padding: 12px;
-        
+        padding: 12px;   
     }
     
     .submit-button {
@@ -1631,6 +1610,5 @@ textarea {
         align-items: flex-start;
         gap: 4px;
     }
-
 }
 }
