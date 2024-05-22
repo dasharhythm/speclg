@@ -209,7 +209,7 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 64px;
+    padding: 16px 0;
     gap: 12px;
     width: 300px;
     height: 60px;
@@ -1207,7 +1207,7 @@ textarea {
         }
 
         .button2 {
-            padding: 10px 17px;
+            padding: 10px 0;
             gap: 10px;
             width: 171px;
             height: 40px;
