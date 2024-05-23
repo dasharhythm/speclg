@@ -56,6 +56,12 @@ h5 {
     display: flex;
     justify-content: space-around;
     padding: 0 5% 0 5%;
+    align-items: center;
+}
+
+.contacts-col-right {
+    display: flex;
+    flex-direction: column;
 }
 
 .contacts-item {
@@ -151,7 +157,36 @@ a:hover {
     /* Без повторения */
 }
 
+.banner1 {
+    position: relative;
+    /* Для позиционирования внутреннего контента */
+    width: 100%;
+    /* Контейнер занимает всю ширину */
+    margin-top: 32px;
+    padding-bottom: 46.3%;
+    /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+    background-image: url(assets/Banner1.png);
+    background-size: cover;
+    /* Заполнение контейнера, сохраняя пропорции */
+    background-position: center;
+    /* Центрирование фонового изображения */
+    background-repeat: no-repeat;
+    /* Без повторения */
+}
+
 .banner .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 56px 56px 7.4%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.banner1 .inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -170,6 +205,10 @@ a:hover {
     font-size: 56px;
     line-height: 62px;
     color: #FFFFFF;
+}
+
+.banner-text {
+    color: #1C1C1E;
 }
 
 .buttons {
@@ -305,6 +344,20 @@ a:hover {
     padding: 12px 0;
 }
 
+.card-title1 {
+    padding: 12px 0 24px;
+    height: 100px;
+}
+
+.card-description {
+    padding-bottom: 24px;
+    height: 116px;
+}
+
+#card-list {
+    margin: 32px 0 112px;
+}
+
 .card-info {
     display: flex;
     justify-content: space-between;
@@ -363,6 +416,23 @@ sup {
 }
 
 .button3:hover {
+    color: #FFFFFF;
+    background: #1859D7;
+}
+
+.button4 {
+    padding: 8px 24px;
+    width: 258px;
+    height: 44px;
+    color: #1047B0;
+    border: 1.5px solid #1047B0;
+    background: #FFFFFF;
+    border-radius: 2px;
+    transition: color 180ms ease-in-out;
+    cursor: pointer;
+}
+
+.button4:hover {
     color: #FFFFFF;
     background: #1859D7;
 }

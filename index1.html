@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Грузоперевозки | Спецтехника</title>
+    <script src="script.js?1a" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <img class="logo" src="assets/logo.svg">
+            <div class="contacts">
+              <div class="contacts-col">
+                <div class="contacts-item">
+                 <img src="assets/Location.svg">
+                  <h5>
+                    Санкт-Петербург<br>
+                    Пр. Обуховской обороны 112<br>
+                    к.2 литера З, офис 227a
+                  </h5>
+                </div>
+              </div>
+              <div class="contacts-col-right" style="align-items: flex-end">
+                    <div class="contacts-item">
+                        <img src="assets/Phone.svg">
+                        <h5>
+                         +7-999-209-99-88
+                        </h5>
+                    </div>
+                    <div class="contacts-item">
+                        <img src="assets/Mail.svg">
+                        <h5>info@spec-lg.ru</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="header-button"
+            onclick="goToLink('https://api.whatsapp.com/send/?phone=79992099988&text&type=phone_number&app_absent=0')">Связаться с нами</button>
+        
+          <div class="burger-menu">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <img src="assets/Menu.svg">
+            </div>
+            <div class="menu-items">
+                <button class="menu-close" onclick="toggleMenu()">
+                    <img src="assets/close.svg" width="24">
+                </button>
+                <ul>
+                    <li><a href="https://speclg.ru/#about">О компании</a></li>
+                    <li><a href="https://speclg.ru/#gruzoperevozki">Грузоперевозки</a></li>
+                    <li><a href="https://speclg.ru/#arenda-spectehniki">Аренда спецтехники</a></li>
+                    <li><a href="https://speclg.ru/#nerudnye-materialy">Нерудные материалы</a></li>
+                    <li><a href="https://speclg.ru/#uslugi">Услуги</a></li>
+                </ul>
+                <div class="contacts-col-contaiter" id="contacts-col-contaiter">
+                    <div class="contacts-item">
+                        <img src="assets/Location.svg" width="20">
+                        <h5>
+                            Санкт-Петербург
+                            пр.Обуховской обороны 112
+                            к.2 литера З, офис 227a
+                        </h5>
+                    </div>
+                    <div class="contacts-item1">
+                        <img src="assets/Phone.svg" width="20">
+                        <h5>
+                            +7-999-209-99-88
+                        </h5>
+                    </div>
+                    <div class="contacts-item1">
+                        <img src="assets/Mail.svg" width="20">
+                        <h5>info@spec-lg.ru</h5>
+                    </div>
+                </div>
+                <button class="menu-button"
+                    onclick="goToLink('https://api.whatsapp.com/send/?phone=79992099988text&type=phone_number&app_absent=0')">Связаться
+                    с нами</button>
+            </div>
+        </div>
+        <div class="overlay hidden" onclick="toggleMenu()"></div>
+    </header>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="https://speclg.ru/#o-kompanii">О компании</a>
+        </div>
+        <div class="menu-item">
+            <a href="https://speclg.ru/#gruzoperevozki">Грузоперевозки</a>
+        </div>
+        <div class="menu-item">
+            <a href="https://speclg.ru/#arenda-spectehniki">Аренда спецтехники</a>
+        </div>
+        <div class="menu-item">
+            <a href="https://speclg.ru/#nerudnye-materialy">Нерудные материалы</a>
+        </div>
+        <div class="menu-item">
+            <a href="https://speclg.ru/#uslugi">Услуги</a>
+        </div>
+    </div>
+    <div class="banner1">
+        <div class="inner">
+            <div class="text">
+                <h1 class="banner-text">Быстрая доставка любых грузов по России и СНГ</h1>
+            </div>
+            <div class="buttons">
+                <button class="button1" onclick="openModal()">Заказать</button>
+                <button class="button2" onclick="goToLink('https://speclg.ru/#gruzoperevozki')">Подробнее</button>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <h2>О компании</h2>
+        <p>Компания «Спецлогистика» — ваш надежный партнер в сфере грузоперевозок и аренды спецтехники. Мы предоставляем комплексные и эффективные решения для транспортировки грузов любого объема ихарактера, а также предлагаем широкий ассортимент специализированной техники для решения самых разнообразных задач.
+        </p>
+    </div>
+    <div class="advantage-list">
+        <div class="advantage-card">
+            <div class="advantage-title">
+                <h3>Разнообрание техники</h3>
+            </div>
+            <p>Наш парк включает в себя современные грузовые автомобили различной грузоподъемности, а также разнообразную спецтехнику — от экскаваторов и бульдозеров до автокранов и погрузчиков. 
+            </p>
+        </div>
+        <div class="advantage-card">
+            <div class="advantage-title">
+                <h3>Гибкий подход</h3>
+            </div>
+            <p>Каждый клиент уникален, и поэтому готовы предложить гибкие и индивидуальные условия сотрудничества. Мы нацелены на построение долгосрочных отношений, основанных на взаимном доверии.
+            </p>
+        </div>
+        <div class="advantage-card">
+            <div class="advantage-title">
+                <h3>Клиентоориентированность</h3>
+            </div>
+            <p>Мы всегда готовы выслушать потребности наших клиентов и предложить оптимальные решения. Наша команда оперативно реагирует на запросы, обеспечивая бесперебойное выполнение задач. 
+            </p>
+        </div>
+    </div>
+    <h2>Грузоперевозки</h2>
+    <div class="card-list" id="card-list">
+        <div class="card">
+            <img class="image-card" src="assets/delivery.png">
+            <h3 class="card-title1">Доставка отдельными машинами</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/loading-into-the-car.png">
+            <h3 class="card-title1">Догруз в машину</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/oversized-transportation.png">
+            <h3 class="card-title1">Негабаритные перевозки</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/multimodal-transportation.png">
+            <h3 class="card-title1">Мультимодальные перевозки</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+    </div>
+    <h2>Аренда спецтехники</h2>
+    <p>Компания «Спецлогистика» предоставляет аренду спецтехники в Санкт-Петербурге и Ленинградской области, предлагая полный спектр услуг. Устанавливаем долгосрочное сотрудничество со строительными, коммунальными организациями в нашем регионе, предоставляя современную технику на выгодных условиях. У нас можно арендовать спецтехнику, соответствующую различным потребностям.</p>
+    <h2>Нерудные материалы</h2>
+    <p>Поставка материалов — услуга, включающая в себя процессы закупки и доставки строительных материалов на объект. Это обеспечивает наличие необходимых материалов на месте и в нужное время, что способствует экономии как времени, так и средств, а также гарантирует соблюдение сроков выполнения проекта.</p>
+    <div class="card-list" id="card-list">
+        <div class="card">
+            <img class="image-card" src="assets/Sand.png">
+            <h3 class="card-title1">Песок</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Crushed-stone.png">
+            <h3 class="card-title1">Щебень</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Crushed-stone-sand-mixture.png">
+            <h3 class="card-title1">ЩПС</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Priming.png">
+            <h3 class="card-title1">Плодородный грунт</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Recycled-materials.png">
+            <h3 class="card-title1">Вторичные нерудные материалы</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Quartzite.png">
+            <h3 class="card-title1">Малиновый кварцит</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Expanded-clay.png">
+            <h3 class="card-title1">Керамзит</h3>
+            <button class="button3" onclick="openModal()">Заказать</button>
+        </div>
+    </div>
+    <h2>Услуги</h2>
+    <div class="card-list" id="card-list">
+        <div class="card">
+            <img class="image-card" src="assets/Excavation.png">
+            <h3 class="card-title">Земляные работы</h3>
+            <h5 class="card-description">Совокупность мероприятий, направленных на перемещение и изменение грунта на строительных участках.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Dismantling.png">
+            <h3 class="card-title">Демонтаж</h3>
+            <h5 class="card-description">Разнообразные задачи включают в себя операции от демонтажа стен и перегородок до снятия кровли и разрушения фундаментов.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Rigging-work.png">
+            <h3 class="card-title">Такелажные работы</h3>
+            <h5 class="card-description">Транспортировка и подъем грузов с использованием специализированного оборудования.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Removal.png">
+            <h3 class="card-title">Уборка и вывоз</h3>
+            <h5 class="card-description">Уборка различных участков от мусора и отходов, включая их последующее утилизирование.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Roadworks.png">
+            <h3 class="card-title">Дорожные работы</h3>
+            <h5 class="card-description">Формирование, обслуживание и восстановление транспортной инфраструктуры.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+        <div class="card">
+            <img class="image-card" src="assets/Supply-of-materials.png">
+            <h3 class="card-title">Поставка материалов</h3>
+            <h5 class="card-description">Приобретение и поставка строительных материалов на строительную площадку в нужное время.</h5>
+            <button class="button4" onclick="openModal()">Подробнее</button>
+        </div>
+    </div>
+    <h2 id="reviews">Отзывы клиентов</h2>
+        <ul class="tags-list no-scrollbar">
+            <li class="tag" data-filter="all" id="all-reviews">Все отзывы</li>
+            <li class="tag" data-filter="avito"><img src="assets/avito.png">4.7</li>
+            <li class="tag" data-filter="2gis"><img src="assets/2gis.png">5.0</li>
+            <li class="tag" data-filter="yandex"><img src="assets/yandex maps.png">5.0</li>
+        </ul>
+        <div class="review">
+            <div id="rating">
+                <div class="rating-items">
+                    <h4>4.9 из 5</h4>
+                    <img id="rating-icon" src="assets/rating.svg">
+                </div>
+                <p>На основе 47 оценок</p>
+            </div>
+            <div class="button-container">
+                <button class="prev">
+                    <img src="assets/Back.svg">
+                </button>
+                <button class="next">
+                    <img src="assets/Forward.svg">
+                </button>
+            </div>
+        </div>
+        <div class="carousel no-scrollbar">
+            <div class="show slide avito">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/v.png">
+                        <span class="name">Владимир Богданов</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date" id="date">6 марта 2024</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Аренда экскаватора погрузчика JCB 4CX»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date" id="date">6 марта 2024</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Аренда экскаватора погрузчика JCB 4CX»</span>
+                        </div>
+                        <div <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Самая адекватная специалист который я встречал конструктивная готова к
+                                разговору Дарья 10 баллов таких людей бы побольше в этой сфере</span>
+                        </div>
+                        <a class="link"
+                            href="https://www.avito.ru/user/86cf5f2c543cd81d71f222488368351a/profile/all?src=sharing&sellerId=86cf5f2c543cd81d71f222488368351at"
+                            target="_blank">Отзыв Авито</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide avito">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/a.png">
+                        <span class="name">Александр</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">4 марта 2024</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Аренда экскаватора погрузчика JCB 4CX»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">4 марта 2024</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Аренда экскаватора погрузчика JCB 4CX»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Все прошло отлично, услуга оказана. Рекомендую</span>
+                        </div>
+                        <a class="link"
+                            href="https://www.avito.ru/user/86cf5f2c543cd81d71f222488368351a/profile/all?src=sharing&sellerId=86cf5f2c543cd81d71f222488368351at"
+                            target="_blank">Отзыв Авито</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide yandex">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/e.png">
+                        <span class="name">Екатерина Н.</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">11 октября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">11 октября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Прекрасно справились с переездом, марштрут Казань-Питер! Рада, что
+                                нашла профессионалов своего дела. Оперативно сориентировали по цене, которая кстати
+                                очень приемлемая!</span>
+                        </div>
+                        <a class="link"
+                            href="https://yandex.ru/maps/org/spetslogistika/30889117406/reviews/?ll=30.472264%2C59.866931&utm_medium=mapframe&utm_source=maps%22%20style%3D%22color%3A&z=15"
+                            target="_blank">Отзыв Яндекс.Карты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide yandex">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/n.png">
+                        <span class="name">Надежда Павловская</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">8 октября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">8 октября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Благодарю компанию "Спецлогистика" за прекрасно проделанную работу, за
+                                профессионализм сотрудников, вежливое отношение и качественную доставку груза!</span>
+                        </div>
+                        <a class="link"
+                            href="https://yandex.ru/maps/org/spetslogistika/30889117406/reviews/?ll=30.472264%2C59.866931&utm_medium=mapframe&utm_source=maps%22%20style%3D%22color%3A&z=15"
+                            target="_blank">Отзыв Яндекс.Карты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide yandex">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/e1.png">
+                        <span class="name">Елена Николаева</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">6 октября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">6 октября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Я в ВОСТОРГЕ!!!! Предстоял очень сложный переезд, на довольно большое
+                                расстояние, очень долго искала к какой компании обратиться. Ни капли не пожалела, что
+                                сделала...</span>
+                        </div>
+                        <a class="link"
+                            href="https://yandex.ru/maps/org/spetslogistika/30889117406/reviews/?ll=30.472264%2C59.866931&utm_medium=mapframe&utm_source=maps%22%20style%3D%22color%3A&z=15"
+                            target="_blank">Отзыв Яндекс.Карты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide yandex">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/v.png">
+                        <span class="name">Вероника Архипова</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">23 сентября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">23 сентября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Обращалась в данное агентство для организации переезда с Орла в Питер.
+                                Быстро договорились обо всем по телефону, все максимально четко и понятно объяснили, как
+                                все будет...</span>
+                        </div>
+                        <a class="link"
+                            href="https://yandex.ru/maps/org/spetslogistika/30889117406/reviews/?ll=30.472264%2C59.866931&utm_medium=mapframe&utm_source=maps%22%20style%3D%22color%3A&z=15"
+                            target="_blank">Отзыв Яндекс.Карты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide 2gis">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/i.png">
+                        <span class="name">Ирина Литвинова</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">12 сентября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">12 сентября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Хочу отметить, что сотрудники всегда работают оперативно, качественно
+                                и внимательно прислушиваются к моим требованиям. Работаю с этой компанией не первый
+                                год...</span>
+                        </div>
+                        <a class="link" href="https://2gis.ru/spb/firm/70000001060965737/tab/reviews"
+                            target="_blank">Отзыв 2ГИС</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide 2gis">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/l.png">
+                        <span class="name">Лариса Жук</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">8 сентября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">8 сентября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Регулярно заказываю в Спецлогистике перевозку экскаваторов с одного
+                                объекта на другой. За все время сотрудничества ни разу не было никаких проблем.
+                                Машина...</span>
+                        </div>
+                        <a class="link" href="https://2gis.ru/spb/firm/70000001060965737/tab/reviews"
+                            target="_blank">Отзыв 2ГИС</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide 2gis">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/e.png">
+                        <span class="name">Елизавета Овсянная</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">5 сентября 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">5 сентября 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Регулярно сотрудничаем с данной логистической компанией, лучшая в
+                                городе. Адекватная цена и качество работы импонирует более чем! Рекомендую!</span>
+                        </div>
+                        <a class="link" href="https://2gis.ru/spb/firm/70000001060965737/tab/reviews"
+                            target="_blank">Отзыв 2ГИС</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide 2gis">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/e1.png">
+                        <span class="name">Елена Сахарова</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">31 августа 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">31 августа 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Очень понравилось работать с данной транспортной компанией. Перевозила
+                                хрупкий груз (люстры и светильники) из Санкт-Петербурга в Москву. Всё чётко, начиная
+                                от...</span>
+                        </div>
+                        <a class="link" href="https://2gis.ru/spb/firm/70000001060965737/tab/reviews"
+                            target="_blank">Отзыв 2ГИС</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide avito">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/p.png">
+                        <span class="name">Пользователь</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">11 апреля 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России попутный груз»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">11 апреля 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России попутный груз»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Отличная компания. Учли все моменты и во время приехали.</span>
+                        </div>
+                        <a class="link"
+                            href="https://www.avito.ru/user/86cf5f2c543cd81d71f222488368351a/profile/all?src=sharing&sellerId=86cf5f2c543cd81d71f222488368351at"
+                            target="_blank">Отзыв Авито</a>
+                    </div>
+                </div>
+            </div>
+            <div class="show slide avito">
+                <div class="card-review">
+                    <div class="card-name">
+                        <img class="user-pic" src="assets/u.png">
+                        <span class="name">Юлия</span>
+                    </div>
+                    <div class="comment-container">
+                        <div class="card-rating-web">
+                            <span class="date">3 марта 2023</span>
+                            <div class="card-rating">
+                                <img src="assets/rating.svg" width="88">
+                                <span class="review-name">«Грузоперевозки по России попутный груз»</span>
+                            </div>
+                        </div>
+                        <div class="card-rating-mob">
+                            <div class="rating">
+                                <span class="date">3 марта 2023</span>
+                                <img src="assets/rating.svg" width="88">
+                            </div>
+                            <span class="review-name">«Грузоперевозки по России попутный груз»</span>
+                        </div>
+                        <div class="comment-items">
+                            <span class="comment-heading">Комментарий</span>
+                            <span class="comment">Замечательная компания. В срок, быстро и вовремя доставили груз.
+                                Водитель помог все разгрузить, всегда на связи менеджер, очень оперативно.
+                                Спасибо!</span>
+                        </div>
+                        <a class="link"
+                            href="https://www.avito.ru/user/86cf5f2c543cd81d71f222488368351a/profile/all?src=sharing&sellerId=86cf5f2c543cd81d71f222488368351at"
+                            target="_blank">Отзыв Авито</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="indicators">
+        </div>
+        <div class="contact-container">
+            <h3>Контакты</h3>
+            <div class="contacts-col-contaiter">
+                <div class="contacts-item">
+                    <img class="contact-icon" src="assets/Location.svg">
+                    <h5>
+                        Санкт-Петербург
+                        пр.Обуховской обороны 112
+                        к.2 литера З, офис 227a
+                    </h5>
+                </div>
+                <div class="contacts-item1">
+                    <img class="contact-icon" src="assets/Phone.svg">
+                    <h5>
+                        +7-999-209-99-88
+                    </h5>
+                </div>
+                <div class="contacts-item1">
+                    <img class="contact-icon" src="assets/Mail.svg">
+                    <h5>info@spec-lg.ru</h5>
+                </div>
+            </div>
+            <button class="button3"
+                onclick="goToLink('https://api.whatsapp.com/send/?phone=79992099988&text&type=phone_number&app_absent=0')">Связаться
+                с нами</button>
+        </div>
+    </div>
+    <iframe class="map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae69623bee1a4f1f6773df30bfae5e43f0bdccb2cdcb376973edd38cf73c86670&amp;source=constructor">
+    </iframe>
+    <a class="whatsapp-button"
+        href="https://api.whatsapp.com/send/?phone=79992099988&text&type=phone_number&app_absent=0" target="_blank">
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1654_2513)">
+                <path
+                    d="M29.8415 0.14176C19.529 1.21168 10.4927 6.8191 5.0013 15.5589C-2.78464 27.9339 -1.328 44.2922 8.50755 55.0687C13.9603 61.0371 20.7665 64.6078 28.9392 65.7679C30.4603 65.9871 35.5263 65.9742 37.1247 65.7679C44.5884 64.7367 51.2658 61.4238 56.3447 56.2418C58.0204 54.5402 58.3685 54.1406 59.4771 52.6711C62.7771 48.2754 64.9298 42.9129 65.7677 37.0605C65.9868 35.5394 65.9868 30.4605 65.7677 28.9394C65.2134 25.0336 64.195 21.7078 62.5837 18.4464C60.8564 14.9918 59.1033 12.5297 56.3575 9.75817C51.2658 4.60192 44.8978 1.39215 37.5759 0.309338C35.9904 0.0773069 31.4142 -0.0258181 29.8415 0.14176ZM38.0271 13.1871C49.5642 15.9328 56.1126 27.5859 52.4001 38.7492C51.4462 41.6367 49.9251 44.0472 47.6306 46.3547C44.7302 49.2679 41.5978 50.9695 37.5115 51.8332C36.39 52.0781 35.7454 52.1297 33.7732 52.1297C30.5118 52.1425 28.4751 51.7172 25.6005 50.4539C24.8915 50.1445 24.2212 49.8867 24.1052 49.8867C24.0021 49.8867 21.656 50.4925 18.8845 51.2273C16.1259 51.9492 13.8443 52.5422 13.8314 52.5293C13.8056 52.5164 14.4243 50.2218 15.1849 47.4375L16.5771 42.3586L15.9712 41.1211C14.6048 38.3496 13.999 35.707 13.999 32.4843C14.0118 26.9672 15.9583 22.2879 19.8513 18.4336C22.9064 15.4043 26.7736 13.5222 31.2595 12.839C31.4786 12.8132 32.7806 12.8004 34.1599 12.8261C36.2997 12.8648 36.8798 12.9164 38.0271 13.1871Z"
+                    fill="#25D366" />
+                <path
+                    d="M32.2908 16.1391C25.9744 16.5902 20.1994 21.102 18.1756 27.1734C17.5311 29.1328 17.3506 30.293 17.3506 32.4844C17.3506 35.823 17.9822 38.0531 19.8643 41.3273L20.1607 41.8688L19.3615 44.7949C18.9232 46.4063 18.5752 47.7598 18.6139 47.7855C18.6396 47.8113 20.0061 47.4762 21.6561 47.0508L24.6596 46.2516L26.2193 47.0379C28.7846 48.3141 31.0146 48.8555 33.7861 48.8555C40.7084 48.8555 47.0377 44.2922 49.2291 37.6922C49.8865 35.6941 50.0541 34.6758 50.0541 32.4844C50.0541 30.9117 49.9896 30.2027 49.7705 29.1328C48.3654 22.5457 43.1834 17.4926 36.6092 16.3195C35.2041 16.0746 33.9021 16.023 32.2908 16.1391ZM28.385 23.6285C28.7975 24.0926 30.4604 28.2047 30.3701 28.5527C30.3314 28.7074 29.9447 29.2875 29.5193 29.8547C29.0939 30.409 28.7459 30.9504 28.7459 31.0664C28.7459 31.3113 29.7771 32.8453 30.5764 33.7863C31.44 34.8047 33.0771 36.0422 34.4564 36.7512C36.1967 37.6148 36.2869 37.6148 37.2795 36.3902C38.517 34.882 38.633 34.7789 38.9682 34.8691C39.3549 34.9852 43.0416 36.7125 43.4283 36.9574C43.7119 37.1379 43.7248 37.2152 43.6604 38.0145C43.6217 38.4914 43.4928 39.123 43.3768 39.4195C43.1061 40.0898 42.1264 40.9922 41.1467 41.4691C40.4635 41.8043 40.2959 41.8301 38.865 41.8301C37.4342 41.8301 37.2279 41.7914 36.0936 41.3918C34.2244 40.7215 33.0643 40.1672 31.6592 39.2262C28.9521 37.4215 25.7424 33.7992 24.4275 31.0535C23.8604 29.8547 23.6799 28.9523 23.7443 27.5859C23.8088 26.3098 24.1311 25.4719 24.9818 24.4148C25.6779 23.5641 26.142 23.3449 27.2377 23.332C27.9982 23.332 28.1529 23.3707 28.385 23.6285Z"
+                    fill="#25D366" />
+            </g>
+            <defs>
+                <clipPath id="clip0_1654_2513">
+                    <rect width="66" height="66" rx="33" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    </a>
+    <footer>
+        <div class="page">
+            <div class="footer-container">
+                <div class="footer-items">
+                    <h4 class="link-heading">Документы</h4>
+                    <a class="links" href="https://disk.yandex.ru/i/gyjB62qcnE4Nlw" target="_blank">Бланк Договор
+                        юр.лица</a>
+                    <a class="links" href="https://disk.yandex.ru/i/z2etnrropTZ8nQ" target="_blank">Бланк Договор
+                        физ.лица</a>
+                    <a class="links" href="https://disk.yandex.ru/i/JkRZXe2TeFRUZg" target="_blank">Бланк Заявка на
+                        перевозку</a>
+                    <a class="links" href="https://disk.yandex.ru/i/mu-j_cS8PpjOSg" target="_blank">Бланк ТТН</a>
+                    <h4 class="link-heading">Грузоперевозки</h4>
+                </div>
+                <div class="footer-items">
+                    <h4 class="link-heading">Аренда спецтехники</h4>
+                    <a class="links">Высотная техника</a>
+                    <a class="links">Землеройная техника</a>
+                    <a class="links">Погрузчики</a>
+                    <a class="links">Техника для перевозки</a>
+                    <a class="links">Дорожная техника</a>
+                    <a class="links">Коммунальная техника</a>
+                    <a class="links">Другое оборудование</a>
+                </div>
+                <div class="footer-items">
+                    <h4 class="link-heading">Услуги</h4>
+                    <a class="links">Земляные работы</a>
+                    <a class="links">Демонтаж</a>
+                    <a class="links">Такелажные работы</a>
+                    <a class="links">Уборка и вывоз</a>
+                    <a class="links">Дорожные работы</a>
+                    <a class="links">Поставка материалов</a>
+                </div>
+                <div class="footer-items">
+                    <h4 class="link-heading">Контакты</h4>
+                    <div class="item">
+                        <img src="assets/location-footer.svg">
+                        <h5>Санкт-Петербург<br>
+                            Пр. Обуховской обороны<br>
+                            112к.2 литера З, офис 227a</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/phone-footer.svg">
+                        <h5>+7-999-209-99-88 <br>
+                            (Отдел логистики)</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/phone-footer.svg">
+                        <h5>+7-999-118-58-55 <br>
+                            (Отдел cпецтехники)</h5>
+                    </div>
+                    <div class="item">
+                        <div id="mail">
+                            <img src="assets/mail-footer.svg">
+                            <h5>Info@spec-lg.ru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-container" style="align-items: center;">
+                <div class="logo"><img src="assets/logo.svg"></div>
+                <div id="social-networks">
+                    <a class="social-network" href="https://www.instagram.com/speclg/" target="_blank">
+                        <img src="assets/instagram.svg">
+                    </a>
+                    <a class="social-network"
+                        href="https://api.whatsapp.com/send/?phone=79992099988&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="assets/whatsapp.svg">
+                    </a>
+                    <a class="social-network" href="https://t.me/tk_speclogistika" target="_blank">
+                        <img src="assets/tg.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-container-mob">
+                <div class="accordion">
+                    <div class="accordion-section">
+                        <h4 class="accordion-title">Документы</h4>
+                        <div class="accordion-content">
+                            <a class="links" href="https://disk.yandex.ru/i/gyjB62qcnE4Nlw" target="_blank">Бланк
+                                Договор
+                                юр.лица</a>
+                            <a class="links" href="https://disk.yandex.ru/i/z2etnrropTZ8nQ" target="_blank">Бланк
+                                Договор
+                                физ.лица</a>
+                            <a class="links" href="https://disk.yandex.ru/i/JkRZXe2TeFRUZg" target="_blank">Бланк Заявка
+                                на
+                                перевозку</a>
+                            <a class="links" href="https://disk.yandex.ru/i/mu-j_cS8PpjOSg" target="_blank">Бланк
+                                ТТН</a>
+                        </div>
+                    </div>
+                    <div class="accordion-section">
+                        <h4 class="accordion-title">Грузоперевозки</h4>
+                        <div class="accordion-content">
+                            <a class="links">Доставка отдельными машинами</a>
+                            <a class="links">Догруз в машину</a>
+                            <a class="links">Ж/Д перевозки</a>
+                            <a class="links">Негабаритные перевозки</a>
+                        </div>
+                    </div>
+                    <div class="accordion-section">
+                        <h4 class="accordion-title">Аренда спецтехники</h4>
+                        <div class="accordion-content">
+                            <a class="links">Высотная техника</a>
+                            <a class="links">Землеройная техника</a>
+                            <a class="links">Погрузчики</a>
+                            <a class="links">Техника для перевозки</a>
+                            <a class="links">Дорожная техника</a>
+                            <a class="links">Коммунальная техника</a>
+                            <a class="links">Другое оборудование</a>
+                        </div>
+                    </div>
+                    <div class="accordion-section">
+                        <h4 class="accordion-title">Услуги</h4>
+                        <div class="accordion-content">
+                            <a class="links">Земляные работы</a>
+                            <a class="links">Демонтаж</a>
+                            <a class="links">Такелажные работы</a>
+                            <a class="links">Уборка и вывоз</a>
+                            <a class="links">Дорожные работы</a>
+                            <a class="links">Поставка материалов</a>
+                        </div>
+                    </div>
+                    <h4 class="link-heading">Контакты</h4>
+                    <div class="item">
+                        <img src="assets/location-footer.svg" width="20">
+                        <h5>Санкт-Петербург, пр. Обуховской обороны
+                            112 к.2 литера З, офис 227a</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/phone-footer.svg" width="20">
+                        <h5>+7-999-209-99-88
+                            (Отдел логистики)</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/phone-footer.svg" width="20">
+                        <h5>+7-999-118-58-55
+                            (Отдел спецтехники)</h5>
+                    </div>
+                    <div class="item">
+                        <div id="mail">
+                            <img src="assets/mail-footer.svg" width="20">
+                            <h5>Info@spec-lg.ru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container-mob1" style="align-items: center;">
+                <img class="logo" src="assets/logo.svg">
+                <div id="social-networks">
+                    <a class="social-network" href="https://www.instagram.com/speclg/" target="_blank">
+                        <img src="assets/instagram.svg" width="32">
+                    </a>
+                    <a class="social-network"
+                        href="https://api.whatsapp.com/send/?phone=79992099988&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="assets/whatsapp.svg" width="32">
+                    </a>
+                    <a class="social-network" href="https://t.me/tk_speclogistika" target="_blank">
+                        <img src="assets/tg.svg" width="32">
+                    </a>
+                </div>
+            </div>
+    </footer>
+</body>
