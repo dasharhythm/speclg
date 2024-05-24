@@ -157,25 +157,21 @@ a:hover {
     /* Без повторения */
 }
 
-.banner1 {
-    position: relative;
-    /* Для позиционирования внутреннего контента */
-    width: 100%;
-    /* Контейнер занимает всю ширину */
-    margin-top: 32px;
-    padding-bottom: 46.3%;
-    /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+#first {
     background-image: url(assets/Banner1.png);
-    background-size: cover;
-    /* Заполнение контейнера, сохраняя пропорции */
-    background-position: center;
-    /* Центрирование фонового изображения */
-    background-repeat: no-repeat;
-    /* Без повторения */
+    color: #1C1C1E;
 }
 
-.banner .inner {
-    position: absolute;
+#second {
+    background-image: url(assets/Banner2.png);
+}
+
+#third {
+    background-image: url(assets/Banner3.png);
+}
+
+.inner {
+    /* position: absolute; */
     top: 0;
     left: 0;
     right: 0;
@@ -185,29 +181,17 @@ a:hover {
     justify-content: space-between;
     flex-direction: column;
 }
-
-.banner1 .inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 56px 56px 7.4%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
 
 .text {
-    width: 973px;
     font-weight: 700;
     font-size: 56px;
-    line-height: 62px;
+    line-height: 64px;
     color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(28, 28, 30, 0.15);
+
 }
 
-.banner-text {
+#text {
     color: #1C1C1E;
 }
 
@@ -351,7 +335,7 @@ a:hover {
 
 .card-description {
     padding-bottom: 24px;
-    height: 116px;
+    height: 106px;
 }
 
 #card-list {
@@ -633,6 +617,7 @@ sup {
 
 .carousel .slide {
     display: none;
+    /* flex: 1 0 100%; */
     /* По умолчанию скрываем слайды */
 }
 
