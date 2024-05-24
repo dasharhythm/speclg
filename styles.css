@@ -170,8 +170,8 @@ a:hover {
     background-image: url(assets/Banner3.png);
 }
 
-.inner {
-    /* position: absolute; */
+.banner .inner {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -597,8 +597,6 @@ sup {
     font-weight: 400;
     color: #1047B0;
 }
-
-/* тут был карусель */
 
 .contact-container {
     position: absolute;

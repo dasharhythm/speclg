@@ -2,8 +2,17 @@ const carousel = document.querySelector('.carousel');
 const slides = Array.from(carousel.children);
 let slideWidth = slides[0].getBoundingClientRect().width;
 
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+
+let prevButton = carousel.querySelector('.prev');
+let nextButton = carousel.querySelector('.next');
+
+if (carousel.id) {
+    const caruoselControls = document.querySelector(`[data-carousel-id=${carousel.id}]`)
+    prevButton = caruoselControls.querySelector('.prev');
+    nextButton = caruoselControls.querySelector('.next');
+}
+
+
 let indicators = document.querySelectorAll('.indicator');
 let slideSize = 2; // По умолчанию считаем, что на декстопе
 
@@ -85,6 +94,8 @@ carousel.addEventListener('scroll', () => {
         setActiveIndicator(currentIndex);
     }
 });
+
+/// 
 
 // Фильтрация по тегам и создание новых индикаторов
 document.querySelectorAll('.tag').forEach((btn) => {
