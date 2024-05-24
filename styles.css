@@ -598,70 +598,7 @@ sup {
     color: #1047B0;
 }
 
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    margin: 0 -12px;
-    scroll-snap-type: x mandatory;
-    /* Для привязки к элементам при скролле */
-    -webkit-overflow-scrolling: touch;
-    /* Улучшение прокрутки на мобильных устройствах */
-}
-
-/* Стиль для элементов внутри карусели */
-.slide {
-    display: inline-block;
-    scroll-snap-align: start;
-    padding: 12px;
-}
-
-.carousel .slide {
-    display: none;
-    /* flex: 1 0 100%; */
-    /* По умолчанию скрываем слайды */
-}
-
-.carousel .slide.show {
-    display: inline-block;
-    /* Показываем слайды, которые должны быть видимыми */
-}
-
-.no-scrollbar {
-
-    overflow-y: auto;
-    /* Позволяет вертикальную прокрутку */
-    scrollbar-width: none;
-    /* Скрывает полосу прокрутки в Firefox */
-}
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* Скрывает полосу прокрутки в Chrome и Safari */
-}
-
-.indicators {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-}
-
-.indicator {
-    width: 8px;
-    height: 8px;
-    background-color: #D8D8D9;
-    border-radius: 50%;
-    margin: 0 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    /* Плавный переход при изменении цвета */
-}
-
-.indicator.active {
-    background-color: #1047B0;
-    width: 10px;
-    height: 10px;
-}
+/* тут был карусель */
 
 .contact-container {
     position: absolute;
@@ -1492,64 +1429,7 @@ textarea {
             font-weight: 400;
             height: 40px;
         }
-
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            margin: 16px 10px 0;
-            scroll-snap-type: x mandatory;
-            /* Для привязки к элементам при скролле */
-            -webkit-overflow-scrolling: touch;
-            /* Улучшение прокрутки на мобильных устройствах */
-        }
-
-        /* Стиль для элементов внутри карусели */
-        .slide {
-            display: inline-block;
-            scroll-snap-align: start;
-            padding: 12px;
-        }
-
-        .carousel .slide {
-            display: none;
-            /* По умолчанию скрываем слайды */
-        }
-
-        .carousel .slide.show {
-            display: inline-flex;
-            width: 100%;
-            /* Показываем слайды, которые должны быть видимыми */
-        }
-
-        .no-scrollbar {
-
-            overflow-y: auto;
-            /* Позволяет вертикальную прокрутку */
-            scrollbar-width: none;
-            /* Скрывает полосу прокрутки в Firefox */
-        }
-
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-            /* Скрывает полосу прокрутки в Chrome и Safari */
-        }
-
-        .indicators {
-            padding: 4px 0 52px;
-        }
-
-        .indicator {
-            width: 6px;
-            height: 6px;
-            margin: 0 2px;
-            /* Плавный переход при изменении цвета */
-        }
-
-        .indicator.active {
-            width: 8px;
-            height: 8px;
-        }
-
+        
         .contact-container {
             position: static;
             margin: 0 20px 24px;
