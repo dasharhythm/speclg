@@ -9,7 +9,7 @@
         <div class="show slide"></div>
         <div class="show slide"></div>
     </div>
-    <div class="controls">
+    <div class="controls dark">
         <button class="prev">
             <img src="assets/Back.svg">
         </button>
