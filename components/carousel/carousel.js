@@ -20,14 +20,14 @@ function initCarousel(carousel) {
 
 
     let indicators = carousel.querySelectorAll('.indicator');
-    let slideStep = 2; // По умолчанию считаем, что на декстопе
+    let slideStep = getSlideStep();
     let indicatorsCount = Math.ceil(slides.length / slideStep)
 
     const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
 
     function refreshIndicators(event) {
         const isMobile = event.matches
-        slideStep = isMobile ? 1 : 2;
+        slideStep = isMobile ? 1 : getSlideStep();
         indicatorsCount = Math.ceil(slides.length / slideStep)
         createIndicators(indicatorsCount)
         indicators = carousel.querySelectorAll('.indicator'); // Обновляем массив индикаторов
@@ -128,6 +128,15 @@ function initCarousel(carousel) {
             setActiveIndicator(currentSlideIndex);
         });
     });
+
+    function getSlideStep() {
+        if (carousel.classList.contains('show-1')) return 1;
+        if (carousel.classList.contains('show-2')) return 2;
+        if (carousel.classList.contains('show-3')) return 3;
+        if (carousel.classList.contains('show-4')) return 4;
+        if (carousel.classList.contains('show-5')) return 5;
+        return 1; // По умолчанию
+    }
 }
 
 document.querySelectorAll('.carousel').forEach(function (carouselItem) {

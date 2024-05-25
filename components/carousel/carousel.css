@@ -3,45 +3,40 @@
     flex-direction: column;
 }
 
+/* Classes to control the number of visible slides */
+.carousel .slide,
+.carousel.show-1 .slide {
+    flex: 0 0 100%;
+}
+
+.carousel.show-2 .slide {
+    flex: 0 0 50%;
+}
+
 .carousel .slides {
     display: flex;
     overflow-x: auto;
     margin: 0 -12px;
-    scroll-snap-type: x mandatory;
-    /* Для привязки к элементам при скролле */
-    -webkit-overflow-scrolling: touch;
-    /* Улучшение прокрутки на мобильных устройствах */
+    scroll-snap-type: x mandatory; /* Для привязки к элементам при скролле */
+    -webkit-overflow-scrolling: touch; /* Улучшение прокрутки на мобильных устройствах */
+    overflow-y: auto; /* Позволяет вертикальную прокрутку */
+    scrollbar-width: none; /* Скрывает полосу прокрутки в Firefox */
+}
+
+.carousel .slides::-webkit-scrollbar {
+    display: none; /* Скрывает полосу прокрутки в Chrome и Safari */
 }
 
 /* Стиль для элементов внутри карусели */
-.slide {
+.carousel .slide {
     display: inline-block;
     scroll-snap-align: start;
     padding: 12px;
-}
-
-.carousel .slide {
-    display: none;
-    /* flex: 1 0 100%; */
-    /* По умолчанию скрываем слайды */
+    display: none; /* По умолчанию скрываем слайды */
 }
 
 .carousel .slide.show {
-    display: inline-block;
-    /* Показываем слайды, которые должны быть видимыми */
-}
-
-/* for .slides */
-.no-scrollbar {
-    overflow-y: auto;
-    /* Позволяет вертикальную прокрутку */
-    scrollbar-width: none;
-    /* Скрывает полосу прокрутки в Firefox */
-}
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* Скрывает полосу прокрутки в Chrome и Safari */
+    display: inline-block; /* Показываем слайды, которые должны быть видимыми */
 }
 
 .controls {

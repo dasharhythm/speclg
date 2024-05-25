@@ -726,6 +726,18 @@ hr {
 }
 
 
+/* for .slides */
+.no-scrollbar {
+    overflow-y: auto;
+    /* Позволяет вертикальную прокрутку */
+    scrollbar-width: none;
+    /* Скрывает полосу прокрутки в Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Скрывает полосу прокрутки в Chrome и Safari */
+}
 
 
 @media (max-width: 1200px) {

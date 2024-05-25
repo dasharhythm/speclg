@@ -1,27 +1,8 @@
 # Carousel
 
-```html
-<div class="button-container">
-    <button class="prev">
-        <img src="assets/Back.svg">
-    </button>
-    <button class="next">
-        <img src="assets/Forward.svg">
-    </button>
-</div>
-<div class="carousel no-scrollbar">
-    <div class="show slide"></div>
-    <div class="show slide"></div>
-    <div class="show slide"></div>
-    <div class="show slide"></div>
-</div>
-<div class="indicators">
-</div>
-```
-
 
 ```html
-<div class="carousel no-scrollbar">
+<div class="carousel show-2">
     <div class="slides">
         <div class="show slide"></div>
         <div class="show slide"></div>
@@ -51,7 +32,7 @@
         <img src="assets/Forward.svg">
     </button>
 </div>
-<div class="carousel no-scrollbar" id="carousel1">
+<div class="carousel" id="carousel1">
     <div class="slides">
         <div class="show slide"></div>
         <div class="show slide"></div>
