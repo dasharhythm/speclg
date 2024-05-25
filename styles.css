@@ -255,7 +255,8 @@ a:hover {
 }
 
 .controls-banner button {
-    background: rgba(28, 28, 30, 0.5);;
+    background: rgba(28, 28, 30, 0.5);
+    ;
     display: flex;
     align-items: center;
     width: 44px;
@@ -1162,414 +1163,414 @@ textarea {
     }
 }
 
-    @media (max-width: 600px) {
-
-        h1 {
-            font-size: 19px;
-            line-height: 24px;
-        }
-
-        .page {
-            min-width: 375px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .page-header {
-            display: flex;
-            padding: 20px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu-items {
-            width: 75%;
-        }
-
-        .logo {
-            width: 168px;
-            height: 42px;
-        }
-
-        .banner {
-            position: relative;
-            /* Для позиционирования внутреннего контента */
-            width: 100%;
-            /* Контейнер занимает всю ширину */
-            padding-bottom: 56.4%;
-            /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
-            background-image: url(assets/Banner.png);
-            background-size: cover;
-            /* Заполнение контейнера, сохраняя пропорции */
-            background-position: center;
-            /* Центрирование фонового изображения */
-            background-repeat: no-repeat;
-            /* Без повторения */
-            margin-top: 0;
-        }
-
-        .banner .inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 7.3% 20px 9.01%;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-        }
-
-        .text {
-            font-size: 19px;
-            line-height: 24px;
-            width: 350px;
-        }
-
-        .buttons {
-            gap: 8px;
-            font-weight: 400;
-            font-size: 14px;
-        }
-
-        .button1 {
-
-            padding: 10px 40px;
-            gap: 10px;
-            width: 171px;
-            height: 40px;
-            cursor: pointer;
-            transition: color 180ms ease-in-out;
-        }
-
-        .button2 {
-            padding: 10px 0;
-            gap: 10px;
-            width: 171px;
-            height: 40px;
-        }
-
-        .info {
-            margin: 32px 20px 64px;
-            gap: 12px;
-        }
-
-        .advantage-list {
-            flex-direction: column;
-            gap: 12px;
-            margin: 0 20px 64px;
-        }
-
-        .advantage-card {
-            gap: 8px;
-            padding: 20px 20px 28px;
-        }
-
-        .advantage-title {
-            gap: 8px;
-        }
-
-        .chip-list {
-            display: none;
-        }
-
-        .card-list {
-            flex-direction: column;
-            padding: 0px;
-            gap: 12px;
-            margin: 0 20px 64px;
-        }
-
-        .card {
-            width: 100%;
-            padding: 32px;
-        }
-
-        .image-card {
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-title {
-            padding: 12px 0 8px;
-        }
-
-        .card-info {
-            padding-bottom: 4px;
-        }
-
-        .tag-list {
-            gap: 3px;
-            padding: 8px 0 16px;
-        }
-
-        .tag-list li {
-            padding: 3px 8px 4px;
-            gap: 10px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
-        }
-
-        .price {
-            font-size: 14px;
-            line-height: 17px;
-            padding-bottom: 16px;
-        }
-
-        .button3 {
-            padding: 0 0;
-            width: 100%;
-            height: 40px;
-        }
-
-        #reviews {
-            margin-left: 20px;
-        }
-
-        #rating {
-            gap: 12px;
-        }
-
-        .review {
-            margin: 0 20px;
-        }
-
-        .tags-list {
-            gap: 8px;
-            margin: 20px 0 16px;
-            overflow-x: auto;
-            /* Позволяет горизонтальную прокрутку */
-            white-space: nowrap;
-            /* Предотвращает перенос строк */
-        }
-
-        .tags-list li {
-            gap: 4px;
-            padding: 8px 12px;
-            font-weight: 500;
-            font-size: 14px;
-            height: 33px;
-        }
-
-        .tags-list li:first-child {
-            margin-left: 20px;
-        }
-
-        .tags-list li:last-child {
-            margin-right: 20px;
-        }
-
-        .tag img {
-            height: 24px;
-        }
-
-        .button-container {
-            display: none;
-        }
-
-        .star {
-            height: 16px;
-        }
-
-        .card-review {
-            flex: 1 0 100%;
-            padding: 20px;
-        }
-
-        .card-rating-web {
-            display: none;
-        }
-
-        .card-rating-mob {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 12px;
-        }
-
-        .card-name {
-            gap: 8px;
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-
-        .user-pic {
-            width: 24px;
-            height: 24px;
-        }
-
-        .comment-container {
-            margin-left: 4px;
-        }
-
-        .rating {
-            margin: 4px 0 4px;
-            align-items: center;
-            display: flex;
-            gap: 8px;
-        }
-
-        .date {
-            font-size: 13px;
-        }
-
-        .card-rating {
-
-            gap: 8px;
-            margin: 4px 0 12px;
-        }
-
-        .review-name {
-            color: #3A3A3C;
-        }
-
-        .comment-items {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .comment-heading {
-            font-weight: 500;
-            font-size: 14px;
-            color: #3A3A3C;
-        }
-
-        .comment {
-            color: #636366;
-            line-height: 17px;
-            height: 82px;
-            max-height: 82px;
-        }
-
-        .link {
-            text-decoration-line: underline;
-            font-weight: 400;
-            height: 40px;
-        }
-
-        .contact-container {
-            position: static;
-            margin: 0 20px 24px;
-            padding: 32px;
-            width: calc(100% - 40px);
-        }
-
-        .contacts-col-contaiter {
-            gap: 4px;
-            margin: 20px 0;
-        }
-
-        .map {
-            height: 350px;
-        }
-
-        .social-networks {
-            gap: 12px;
-        }
-
-        .item {
-            align-items: center;
-        }
-
-        .footer-container-mob1 {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 20px 80px;
-            padding-top: 12px;
-            border-top: 0.5px solid #B5B6B9;
-        }
-
-        .modal-overlay {
-            z-index: 100;
-        }
-
-        .modal {
-            width: 100%;
-            height: 100%;
-            background: #FFFFFF;
-            top: 0;
-            left: 0;
-            padding: 24px 20px 40px;
-        }
-
-        .modal-close {
-            background: #FFFFFF;
-            float: right;
-            cursor: pointer;
-        }
-
-        #close {
-            width: 24px;
-        }
-
-        .modal-content {
-            margin-top: 28px;
-        }
-
-        .modal-heading1 {
-            text-align: center;
-            width: 100%;
-        }
-
-        .modal-heading2 {
-            font-weight: 400;
-            color: #3A3A3C;
-            text-align: center;
-            margin-top: 12px;
-            margin-bottom: 24px;
-            width: 100%;
-        }
-
-        label {
-            font-size: 13px;
-            font-weight: 400;
-            color: #3A3A3C;
-        }
-
-        .modal-item {
-            margin-top: 12px;
-            gap: 4px;
-        }
-
-        input {
-            height: 40px;
-            max-height: 100px;
-            width: 100%;
-            padding: 12px;
-        }
-
-        textarea {
-            height: 100px;
-            width: 100%;
-            padding: 12px;
-        }
-
-        .submit-button {
-            padding: 16px 64px;
-            gap: 12px;
-            width: 100%;
-            height: 40px;
-        }
-
-        .checkbox {
-            width: 18px;
-            height: 18px;
-            border: 1.5px solid #3A3A3C;
-            border-radius: 2px;
-            margin-right: 4px;
-        }
-
-        #checkbox-text {
-            width: 100%;
-        }
-
-        #modal-item {
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            margin-bottom: 24px;
-            align-items: flex-start;
-            gap: 4px;
-        }
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 19px;
+        line-height: 24px;
     }
+
+    .page {
+        min-width: 375px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .page-header {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        width: 75%;
+    }
+
+    .logo {
+        width: 168px;
+        height: 42px;
+    }
+
+    .banner {
+        position: relative;
+        /* Для позиционирования внутреннего контента */
+        width: 100%;
+        /* Контейнер занимает всю ширину */
+        padding-bottom: 56.4%;
+        /* Соотношение сторон 2.16 (1 / 2.16 ≈ 0.463) */
+        background-image: url(assets/Banner.png);
+        background-size: cover;
+        /* Заполнение контейнера, сохраняя пропорции */
+        background-position: center;
+        /* Центрирование фонового изображения */
+        background-repeat: no-repeat;
+        /* Без повторения */
+        margin-top: 0;
+    }
+
+    .banner .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 7.3% 20px 9.01%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 19px;
+        line-height: 24px;
+        width: 350px;
+    }
+
+    .buttons {
+        gap: 8px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .button1 {
+
+        padding: 10px 40px;
+        gap: 10px;
+        width: 171px;
+        height: 40px;
+        cursor: pointer;
+        transition: color 180ms ease-in-out;
+    }
+
+    .button2 {
+        padding: 10px 0;
+        gap: 10px;
+        width: 171px;
+        height: 40px;
+    }
+
+    .info {
+        margin: 32px 20px 64px;
+        gap: 12px;
+    }
+
+    .advantage-list {
+        flex-direction: column;
+        gap: 12px;
+        margin: 0 20px 64px;
+    }
+
+    .advantage-card {
+        gap: 8px;
+        padding: 20px 20px 28px;
+    }
+
+    .advantage-title {
+        gap: 8px;
+    }
+
+    .chip-list {
+        display: none;
+    }
+
+    .card-list {
+        flex-direction: column;
+        padding: 0px;
+        gap: 12px;
+        margin: 0 20px 64px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 32px;
+    }
+
+    .image-card {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-title {
+        padding: 12px 0 8px;
+    }
+
+    .card-info {
+        padding-bottom: 4px;
+    }
+
+    .tag-list {
+        gap: 3px;
+        padding: 8px 0 16px;
+    }
+
+    .tag-list li {
+        padding: 3px 8px 4px;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 16px;
+    }
+
+    .button3 {
+        padding: 0 0;
+        width: 100%;
+        height: 40px;
+    }
+
+    #reviews {
+        margin-left: 20px;
+    }
+
+    #rating {
+        gap: 12px;
+    }
+
+    .review {
+        margin: 0 20px;
+    }
+
+    .tags-list {
+        gap: 8px;
+        margin: 20px 0 16px;
+        overflow-x: auto;
+        /* Позволяет горизонтальную прокрутку */
+        white-space: nowrap;
+        /* Предотвращает перенос строк */
+    }
+
+    .tags-list li {
+        gap: 4px;
+        padding: 8px 12px;
+        font-weight: 500;
+        font-size: 14px;
+        height: 33px;
+    }
+
+    .tags-list li:first-child {
+        margin-left: 20px;
+    }
+
+    .tags-list li:last-child {
+        margin-right: 20px;
+    }
+
+    .tag img {
+        height: 24px;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    .star {
+        height: 16px;
+    }
+
+    .card-review {
+        flex: 1 0 100%;
+        padding: 20px;
+    }
+
+    .card-rating-web {
+        display: none;
+    }
+
+    .card-rating-mob {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    .card-name {
+        gap: 8px;
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .user-pic {
+        width: 24px;
+        height: 24px;
+    }
+
+    .comment-container {
+        margin-left: 4px;
+    }
+
+    .rating {
+        margin: 4px 0 4px;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+    }
+
+    .date {
+        font-size: 13px;
+    }
+
+    .card-rating {
+
+        gap: 8px;
+        margin: 4px 0 12px;
+    }
+
+    .review-name {
+        color: #3A3A3C;
+    }
+
+    .comment-items {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .comment-heading {
+        font-weight: 500;
+        font-size: 14px;
+        color: #3A3A3C;
+    }
+
+    .comment {
+        color: #636366;
+        line-height: 17px;
+        height: 82px;
+        max-height: 82px;
+    }
+
+    .link {
+        text-decoration-line: underline;
+        font-weight: 400;
+        height: 40px;
+    }
+
+    .contact-container {
+        position: static;
+        margin: 0 20px 24px;
+        padding: 32px;
+        width: calc(100% - 40px);
+    }
+
+    .contacts-col-contaiter {
+        gap: 4px;
+        margin: 20px 0;
+    }
+
+    .map {
+        height: 350px;
+    }
+
+    .social-networks {
+        gap: 12px;
+    }
+
+    .item {
+        align-items: center;
+    }
+
+    .footer-container-mob1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 20px 80px;
+        padding-top: 12px;
+        border-top: 0.5px solid #B5B6B9;
+    }
+
+    .modal-overlay {
+        z-index: 100;
+    }
+
+    .modal {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        top: 0;
+        left: 0;
+        padding: 24px 20px 40px;
+    }
+
+    .modal-close {
+        background: #FFFFFF;
+        float: right;
+        cursor: pointer;
+    }
+
+    #close {
+        width: 24px;
+    }
+
+    .modal-content {
+        margin-top: 28px;
+    }
+
+    .modal-heading1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .modal-heading2 {
+        font-weight: 400;
+        color: #3A3A3C;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    label {
+        font-size: 13px;
+        font-weight: 400;
+        color: #3A3A3C;
+    }
+
+    .modal-item {
+        margin-top: 12px;
+        gap: 4px;
+    }
+
+    input {
+        height: 40px;
+        max-height: 100px;
+        width: 100%;
+        padding: 12px;
+    }
+
+    textarea {
+        height: 100px;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .submit-button {
+        padding: 16px 64px;
+        gap: 12px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .checkbox {
+        width: 18px;
+        height: 18px;
+        border: 1.5px solid #3A3A3C;
+        border-radius: 2px;
+        margin-right: 4px;
+    }
+
+    #checkbox-text {
+        width: 100%;
+    }
+
+    #modal-item {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 24px;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
