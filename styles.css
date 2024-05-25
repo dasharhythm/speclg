@@ -525,24 +525,6 @@ sup {
     height: 24px;
 }
 
-.controls {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.controls button {
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    padding: 20px 15px;
-    box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
-    cursor: pointer;
-}
-
 .card-review {
     width: 636px;
     height: 280px;
@@ -1148,10 +1130,6 @@ textarea {
 
     .advantage-icon {
         width: 20px;
-    }
-
-    .button-container {
-        display: none;
     }
 
     #rating-icon {

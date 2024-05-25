@@ -1,5 +1,7 @@
 const carousel = document.querySelector('.carousel');
-const slides = Array.from(carousel.children);
+const scrollContainer = carousel.querySelector('.slides');
+const indicatorsContainer = carousel.querySelector('.indicators');
+const slides = Array.from(scrollContainer.children);
 let slideWidth = slides[0].getBoundingClientRect().width;
 
 
@@ -13,17 +15,18 @@ if (carousel.id) {
 }
 
 
-let indicators = document.querySelectorAll('.indicator');
-let slideSize = 2; // По умолчанию считаем, что на декстопе
+let indicators = carousel.querySelectorAll('.indicator');
+let slideStep = 2; // По умолчанию считаем, что на декстопе
+let indicatorsCount = Math.ceil(slides.length / slideStep)
 
 const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
 
 function refreshIndicators(event) {
     const isMobile = event.matches
-    slideSize = isMobile ? 1 : 2;
-    createIndicators(slides.length / slideSize)
-    indicators = document.querySelectorAll('.indicator'); // Обновляем массив индикаторов
-
+    slideStep = isMobile ? 1 : 2;
+    indicatorsCount = Math.ceil(slides.length / slideStep)
+    createIndicators(indicatorsCount)
+    indicators = carousel.querySelectorAll('.indicator'); // Обновляем массив индикаторов
 }
 
 // Добавляем слушателя на изменения
@@ -31,13 +34,12 @@ mediaQueryIsMobile.addEventListener("change", refreshIndicators);
 refreshIndicators(mediaQueryIsMobile);
 
 // Текущий индекс
-let currentIndex = 0;
+let currentSlideIndex = 0;
 
 
 // Функция для создания индикаторов
 function createIndicators(slidesToShow) {
-    const indicatorContainer = document.querySelector('.indicators');
-    indicatorContainer.innerHTML = ''; // Очищаем старые индикаторы
+    indicatorsContainer.innerHTML = ''; // Очищаем старые индикаторы
 
     // Создаем новые индикаторы в зависимости от количества видимых слайдов
     for (let i = 0; i < slidesToShow; i++) {
@@ -47,18 +49,18 @@ function createIndicators(slidesToShow) {
             indicator.classList.add('active'); // Первый индикатор активный
         }
         indicator.addEventListener('click', () => {
-            goToSlide(i * slideSize); // Переход к первому слайду в паре
+            goToSlide(i * slideStep); // Переход к первому слайду в паре
         });
-        indicatorContainer.appendChild(indicator);
+        indicatorsContainer.appendChild(indicator);
     }
 
-    indicators = document.querySelectorAll('.indicator'); // Обновляем массив индикаторов
+    indicators = indicatorsContainer.querySelectorAll('.indicator'); // Обновляем массив индикаторов
 }
 
 // Функция для установки активного индикатора
-function setActiveIndicator(index) {
+function setActiveIndicator(slideIndex) {
     indicators.forEach((indicator, i) => {
-        if (i === Math.floor(index / slideSize)) {
+        if (i === Math.round(slideIndex / slideStep)) {
             indicator.classList.add('active');
         } else {
             indicator.classList.remove('active');
@@ -67,35 +69,36 @@ function setActiveIndicator(index) {
 }
 
 // Функция для перехода к конкретному слайду
-function goToSlide(index) {
-    currentIndex = index;
-    carousel.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
-    setActiveIndicator(currentIndex);
+function goToSlide(slideIndex) {
+    if (currentSlideIndex === slideIndex) return;
+    currentSlideIndex = slideIndex;
+    scrollContainer.scrollTo({ left: slideWidth * slideIndex, behavior: 'smooth' });
+    // Не вызываем тут setActiveIndicator, т.к. есть обработчик событий на скролл 
+    // и он вызывется автоматически при вызове scrollTo на scrollContainer
 }
 
 // Обработчики для кнопок "назад" и "вперед"
 prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        goToSlide(Math.max(currentIndex - slideSize, 0));
-    }
+    const prevSlideIndex = Math.max(currentSlideIndex - slideStep, 0);
+    goToSlide(prevSlideIndex);
 });
 
 nextButton.addEventListener('click', () => {
-    if (currentIndex < slides.length - slideSize) {
-        goToSlide(Math.min(currentIndex + slideSize, slides.length - slideSize));
-    }
+    const lastSlideIndex = slides.length - 1;
+    const nextSlideIndex = Math.min(currentSlideIndex + slideStep, lastSlideIndex);
+    goToSlide(nextSlideIndex);
 });
 
 // Обработчик для отслеживания прокрутки
-carousel.addEventListener('scroll', () => {
-    const newIndex = Math.floor(carousel.scrollLeft / slideWidth);
-    if (newIndex !== currentIndex) {
-        currentIndex = newIndex;
-        setActiveIndicator(currentIndex);
+scrollContainer.addEventListener('scroll', () => {
+    const newIndex = Math.round(scrollContainer.scrollLeft / slideWidth);
+    if (newIndex !== currentSlideIndex) {
+        currentSlideIndex = newIndex;
+        setActiveIndicator(currentSlideIndex);
     }
 });
 
-/// 
+/// НЕ ОТНОСИТСЯ К КАРУСЕЛИ
 
 // Фильтрация по тегам и создание новых индикаторов
 document.querySelectorAll('.tag').forEach((btn) => {
@@ -113,12 +116,12 @@ document.querySelectorAll('.tag').forEach((btn) => {
         });
 
         // Прокручиваем карусель в начало
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
 
         // Обновляем индикаторы и текущий индекс
-        createIndicators(visibleSlides / slideSize); // Создаем индикаторы для видимых слайдов
-        currentIndex = 0; // Начинаем с первого видимого слайда
-        setActiveIndicator(currentIndex);
+        createIndicators(visibleSlides / slideStep); // Создаем индикаторы для видимых слайдов
+        currentSlideIndex = 0; // Начинаем с первого видимого слайда
+        setActiveIndicator(currentSlideIndex);
     });
 });
 
