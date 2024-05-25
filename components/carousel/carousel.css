@@ -5,12 +5,12 @@
 }
 
 /* Classes to control the number of visible slides */
-.carousel .slide,
-.carousel.show-1 .slide {
+.carousel .slides .slide,
+.carousel .slides.show-1 .slide {
     flex: 0 0 100%;
 }
 
-.carousel.show-2 .slide {
+.carousel .slides.show-2 .slide {
     flex: 0 0 50%;
 }
 
@@ -79,6 +79,16 @@
     height: 44px;
     border-radius: 50%;
     padding: 0;
+
+    /* по умолчанию скрывам кнопки и показываем управляем их отображение из javascript */
+    /* только темные кнопки будут так вести себя, потому что они внури карусели, а быелы могу быть снаружи и не должны скрываться */
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.controls button.visible {
+    visibility: visible;
+    pointer-events: all;
 }
 
 .controls .prev {
@@ -89,14 +99,21 @@
     margin-right: 10px; /* Adjust the margin as needed */
 }
 
-.indicators {
+.carousel .indicators {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 16px;
 }
 
-.indicator {
+
+.carousel .indicators.inside {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+}
+
+.carousel .indicator {
     width: 8px;
     height: 8px;
     background-color: #D8D8D9;
@@ -107,7 +124,7 @@
     /* Плавный переход при изменении цвета */
 }
 
-.indicator.active {
+.carousel .indicator.active {
     background-color: #1047B0;
     width: 10px;
     height: 10px;
@@ -125,7 +142,7 @@
     }
 
     /* Стиль для элементов внутри карусели */
-    .slide {
+    .carousel .slide {
         display: inline-block;
         scroll-snap-align: start;
         padding: 12px;
@@ -141,36 +158,23 @@
         width: 100%;
         /* Показываем слайды, которые должны быть видимыми */
     }
-
-    .no-scrollbar {
-
-        overflow-y: auto;
-        /* Позволяет вертикальную прокрутку */
-        scrollbar-width: none;
-        /* Скрывает полосу прокрутки в Firefox */
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-        /* Скрывает полосу прокрутки в Chrome и Safari */
-    }
-
-    .controls {
+    
+    .controls.external {
         display: none;
     }
 
-    .indicators {
+    .carousel .indicators {
         padding: 4px 0 52px;
     }
 
-    .indicator {
+    .carousel .indicator {
         width: 6px;
         height: 6px;
         margin: 0 2px;
         /* Плавный переход при изменении цвета */
     }
 
-    .indicator.active {
+    .carousel .indicator.active {
         width: 8px;
         height: 8px;
     }

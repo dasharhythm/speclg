@@ -22,6 +22,7 @@ function initCarousel(carousel) {
     let indicators = carousel.querySelectorAll('.indicator');
     let slideStep = getSlideStep();
     let indicatorsCount = Math.ceil(slides.length / slideStep)
+    let currentSlideIndex = 0;
 
     const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
 
@@ -33,12 +34,25 @@ function initCarousel(carousel) {
         indicators = carousel.querySelectorAll('.indicator'); // Обновляем массив индикаторов
     }
 
+    // Функция для обновления видимости кнопок
+    function updateButtonVisibility() {
+        if (currentSlideIndex === 0) {
+            prevButton.classList.remove('visible')
+        } else {
+            prevButton.classList.add('visible')
+        }
+
+        if (currentSlideIndex >= slides.length - slideStep) {
+            nextButton.classList.remove('visible')
+        } else {
+            nextButton.classList.add('visible')
+        }
+    }
+
     // Добавляем слушателя на изменения
     mediaQueryIsMobile.addEventListener("change", refreshIndicators);
     refreshIndicators(mediaQueryIsMobile);
-
-    // Текущий индекс
-    let currentSlideIndex = 0;
+    updateButtonVisibility();
 
 
     // Функция для создания индикаторов
@@ -77,6 +91,7 @@ function initCarousel(carousel) {
         if (currentSlideIndex === slideIndex) return;
         currentSlideIndex = slideIndex;
         scrollContainer.scrollTo({ left: slideWidth * slideIndex, behavior: 'smooth' });
+        updateButtonVisibility();
         // Не вызываем тут setActiveIndicator, т.к. есть обработчик событий на скролл 
         // и он вызывется автоматически при вызове scrollTo на scrollContainer
     }

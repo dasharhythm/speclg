@@ -2,8 +2,8 @@
 
 
 ```html
-<div class="carousel show-2">
-    <div class="slides">
+<div class="carousel">
+    <div class="slides show-2">
         <div class="show slide"></div>
         <div class="show slide"></div>
         <div class="show slide"></div>
@@ -17,7 +17,7 @@
             <img src="assets/Forward.svg">
         </button>
     </div>
-    <div class="indicators">
+    <div class="indicators inside">
     </div>
 </div>
 ```
