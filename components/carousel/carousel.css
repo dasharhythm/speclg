@@ -141,6 +141,10 @@
         /* Улучшение прокрутки на мобильных устройствах */
     }
 
+    .carousel .slides.mobile-full-screen {
+        margin: 0;
+    }
+
     /* Стиль для элементов внутри карусели */
     .carousel .slide {
         display: inline-block;
@@ -159,12 +163,12 @@
         /* Показываем слайды, которые должны быть видимыми */
     }
     
-    .controls.external {
+    .controls {
         display: none;
     }
 
     .carousel .indicators {
-        padding: 4px 0 52px;
+        padding: 4px 0;
     }
 
     .carousel .indicator {

@@ -3,7 +3,7 @@
 
 ```html
 <div class="carousel">
-    <div class="slides show-2">
+    <div class="slides show-2 mobile-full-screen">
         <div class="show slide"></div>
         <div class="show slide"></div>
         <div class="show slide"></div>

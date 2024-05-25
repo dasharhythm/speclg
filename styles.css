@@ -1319,7 +1319,7 @@ hr {
 
     .contact-container {
         position: static;
-        margin: 0 20px 24px;
+        margin: 52px 20px 24px;
         padding: 32px;
         width: calc(100% - 40px);
     }

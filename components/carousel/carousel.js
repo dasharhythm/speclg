@@ -3,7 +3,8 @@
  * @param {*} carousel — root element of carousel
  */
 function initCarousel(carousel) {
-    const scrollContainer = carousel.querySelector('.slides');
+    const slidesContainer = carousel.querySelector('.slides');
+    const scrollContainer = slidesContainer
     const indicatorsContainer = carousel.querySelector('.indicators');
     const slides = Array.from(scrollContainer.children);
     let slideWidth = slides[0].getBoundingClientRect().width;
@@ -145,11 +146,11 @@ function initCarousel(carousel) {
     });
 
     function getSlideStep() {
-        if (carousel.classList.contains('show-1')) return 1;
-        if (carousel.classList.contains('show-2')) return 2;
-        if (carousel.classList.contains('show-3')) return 3;
-        if (carousel.classList.contains('show-4')) return 4;
-        if (carousel.classList.contains('show-5')) return 5;
+        if (slidesContainer.classList.contains('show-1')) return 1;
+        if (slidesContainer.classList.contains('show-2')) return 2;
+        if (slidesContainer.classList.contains('show-3')) return 3;
+        if (slidesContainer.classList.contains('show-4')) return 4;
+        if (slidesContainer.classList.contains('show-5')) return 5;
         return 1; // По умолчанию
     }
 }
