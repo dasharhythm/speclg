@@ -249,6 +249,22 @@ a:hover {
     background: #1859D7;
 }
 
+.controls-banner {
+    display: flex;
+    flex-direction: row;
+}
+
+.controls-banner button {
+    background: rgba(28, 28, 30, 0.5);;
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
 .info {
     display: flex;
     flex-direction: column;
@@ -378,7 +394,11 @@ sup {
     height: 17px;
     margin: 0 12px 12px 0;
     font-size: 15px;
-    
+    transition: color 180ms ease-in-out;
+}
+
+.card-links a:hover {
+    color: #1859D7;
 }
 
 .tag-list {
@@ -504,13 +524,13 @@ sup {
     height: 24px;
 }
 
-.button-container {
+.controls {
     display: flex;
     flex-direction: row;
     gap: 16px;
 }
 
-.button-container button {
+.controls button {
     background: #FFFFFF;
     display: flex;
     align-items: center;
@@ -1427,7 +1447,7 @@ textarea {
             font-weight: 400;
             height: 40px;
         }
-        
+
         .contact-container {
             position: static;
             margin: 0 20px 24px;
