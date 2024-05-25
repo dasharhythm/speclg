@@ -382,11 +382,14 @@ sup {
     gap: 20px;
 }
 
+.card-equipment .card-image {
+    flex: 1 0 180px;
+}
+
 .card-links {
     display: inline-flex;
     flex-wrap: wrap;
     margin: 16px 0 4px;
-    width: 387px;
 }
 
 .card-links a {
@@ -1160,6 +1163,12 @@ hr {
 
     .card-info {
         padding-bottom: 4px;
+    }
+
+    .card-equipment {
+        width: 100%;
+        height: unset;
+        flex-direction: column;
     }
 
     .tag-list {
