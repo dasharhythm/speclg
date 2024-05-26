@@ -999,6 +999,11 @@ hr {
         padding: 32px;
     }
 
+    .button1, .button2 {
+      height: 48px;  
+      width: 220px
+    }
+
     .menu-items {
         width: 50%;
     }
