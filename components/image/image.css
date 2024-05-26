@@ -45,9 +45,26 @@
     padding-top: calc(25 / 54 * 100%);
 }
 
+
 /* Responsive behavior */
-@media (max-width: 576px) {
-    .image {
-        width: 100%;
+@media (max-width: 600px) {
+    .image.mobile\:16x9::before { 
+        padding-top: calc(9 / 16 * 100%);
+    }
+
+    .image.mobile\:3x2::before {  
+        padding-top: calc(2 / 3 * 100%);
+    }
+
+    .image.mobile\:16x9::before { 
+        padding-top: calc(9 / 16 * 100%);
+    }
+
+    .image.mobile\:54x25::before { 
+        padding-top: calc(25 / 54 * 100%);
+    }
+
+    .image.mobile\:16x9::before { 
+        padding-top: calc(9 / 16 * 100%);
     }
 }
