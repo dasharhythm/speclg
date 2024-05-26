@@ -16,8 +16,7 @@ function toggleMenu() {
 
     const isActive = menuItems.classList.contains('active')
     if (!isActive) {
-        setTimeout(function callBack() { overlay.classList.add('hidden') }, 300)
-
+        setTimeout(function callBack() { overlay.classList.add('hidden') }, 400)
     }
 }
 
