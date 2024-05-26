@@ -4,6 +4,10 @@
     overflow: hidden;
 }
 
+.image.cover img {
+    object-fit: cover; 
+}
+
 .image::before {
     content: '';
     display: block;
@@ -35,6 +39,10 @@
 
 .image.\39 x7::before {  /* 9x7 ratio */
     padding-top: calc(7 / 9 * 100%);
+}
+
+.image.\35 4x25::before {  /* 54:25 ratio */
+    padding-top: calc(25 / 54 * 100%);
 }
 
 /* Responsive behavior */
