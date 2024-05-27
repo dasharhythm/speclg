@@ -116,7 +116,7 @@ textarea {
 }
 
 #checkbox-text {
-    width: 440px;
+    width: 420px;
 }
 
 #modal-item {
@@ -124,6 +124,25 @@ textarea {
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 24px;
+}
+
+#success-modal {
+    padding: 40px;
+}
+
+#modal-heading1 {
+    margin-top: 24px;
+}
+
+#modal-heading2 {
+    margin: 20px 0 64px;
+} 
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
 }
 
 @media (max-width: 600px) {

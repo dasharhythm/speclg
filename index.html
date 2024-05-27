@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Аренда экскаваторов-погрузчиков по выгодным ценам. Быстрая доставка и качественное обслуживание. Звоните прямо сейчас!">
+    <meta name="description"
+        content="Аренда экскаваторов-погрузчиков по выгодным ценам. Быстрая доставка и качественное обслуживание. Звоните прямо сейчас!">
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Аренда экскаваторов-погрузчиков</title>
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="components/modal/modal.css" />
     <script src="components/modal/modal.js" defer></script>
     <link rel="stylesheet" href="components/image/image.css" />
-    
+
 </head>
 
 <body>
@@ -113,8 +114,7 @@
             <div class="image cover 54x25 mobile:3x2">
                 <img src="assets/banners/Banner.webp"
                     srcset="assets/banners/Banner_mob.webp 600w, assets/banners/Banner.webp"
-                    sizes="(max-width: 600px) 600px, 100vw"
-                    alt="banner">
+                    sizes="(max-width: 600px) 600px, 100vw" alt="banner">
 
             </div>
             <div class="inner">
@@ -1036,12 +1036,12 @@
             <button class="modal-close" onclick="closeModal()">
                 <img id="close" src="assets/close.svg" alt="close button">
             </button>
-            <form class="modal-content">
+            <form class="modal-content" id="contact-form" action="https://formspree.io/f/xbjnewqk" method="POST">
                 <h3 class="modal-heading1">Оставьте заявку на расчет</h3>
-                <h4 class="modal-heading2">Мы рассчитаем стоимость аренды спецтехники и перезвоним Вам.</h4>
+                <h4 class="modal-heading2">Мы рассчитаем стоимость аренды спецтехники и перезвоним Вам.</h4>
                 <div class="modal-item">
                     <label>Вид техники</label>
-                    <input type="text" value="Экскаваторы-погрузчики" readonly>
+                    <input type="text" name="equipment" value="Экскаваторы-погрузчики" readonly>
                 </div>
                 <div class="modal-item">
                     <label>Ваше имя</label>
@@ -1055,15 +1055,22 @@
                 </div>
                 <div class="modal-item">
                     <label>Комментарий</label>
-                    <textarea type="text" name="comment" rows="3" placeholder="Параметры и описание работ"></textarea>
+                    <textarea name="comment" rows="3" placeholder="Параметры и описание работ"></textarea>
                 </div>
                 <div class="modal-item" id="modal-item">
                     <input type="checkbox" class="checkbox" required>
-                    <span id="checkbox-text">Отправляя заявку, вы даете согласние на обработку
+                    <span id="checkbox-text">Отправляя заявку, вы даете согласие на обработку
                         персональных данных</span>
                 </div>
                 <button class="submit-button" type="submit">Рассчитать</button>
             </form>
+        </div>
+        <div class="modal hidden" id="success-modal">
+            <div class="modal-content">
+                <h3 class="modal-heading1" id="modal-heading1">Заявка отправлена</h3>
+                <p class="modal-heading2" id="modal-heading2">Менеджер свяжется с вами в ближайшее время.</p>
+                <button class="submit-button" onclick="closeSuccessModal()">Закрыть</button>
+            </div>
         </div>
     </div>
 </body>
