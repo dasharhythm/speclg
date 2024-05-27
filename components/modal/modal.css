@@ -159,6 +159,10 @@ textarea {
         padding: 24px 20px 40px;
     }
 
+    .modal .hidden {
+        display: none;
+    }
+
     .modal-close {
         background: #FFFFFF;
         float: right;
@@ -239,10 +243,6 @@ textarea {
         gap: 4px;
     }
 
-    #success-modal {
-        display: flex;
-        align-items: center;
-    }
 
     #success-modal .modal-content {
         display: flex;
