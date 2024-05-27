@@ -32,7 +32,7 @@
 }
 
 .modal-content {
-    margin-top: 28px;
+    margin-top: 64px;
 }
 
 .modal-heading1 {
@@ -249,5 +249,11 @@ textarea {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: 160px;
     }
+
+    #modal-heading2 {
+        margin: 12px 0 40px;
+    }
+   
 }
