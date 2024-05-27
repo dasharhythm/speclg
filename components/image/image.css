@@ -34,7 +34,7 @@
 }
 
 .image.\31 x1::before {  /* 1x1 ratio */
-    padding-top: 100%; 
+    padding-top: 100%;
 }
 
 .image.\39 x7::before {  /* 9x7 ratio */
@@ -56,15 +56,7 @@
         padding-top: calc(2 / 3 * 100%);
     }
 
-    .image.mobile\:16x9::before { 
-        padding-top: calc(9 / 16 * 100%);
-    }
-
     .image.mobile\:54x25::before { 
         padding-top: calc(25 / 54 * 100%);
-    }
-
-    .image.mobile\:16x9::before { 
-        padding-top: calc(9 / 16 * 100%);
     }
 }
