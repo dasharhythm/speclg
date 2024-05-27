@@ -238,4 +238,16 @@ textarea {
         align-items: flex-start;
         gap: 4px;
     }
+
+    #success-modal {
+        display: flex;
+        align-items: center;
+    }
+
+    #success-modal .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
