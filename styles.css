@@ -67,6 +67,8 @@ h5 {
 
 .contact-info {
     color: #636366;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .contacts-col-right {
@@ -420,7 +422,6 @@ sup {
 }
 
 .button3 {
-    padding: 8px 24px;
     width: 258px;
     height: 44px;
     color: #FFFFFF;
@@ -606,7 +607,6 @@ sup {
     height: 600px;
 }
 
-
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -705,7 +705,6 @@ hr {
 .icon {
     flex-shrink: 0;
 }
-
 
 /* for .slides */
 .no-scrollbar {
@@ -994,6 +993,11 @@ hr {
     h1 {
         font-size: 28px;
         line-height: 34px;
+    }
+
+    .contact-info {
+        font-size: 13px;
+        line-height: 16px;
     }
 
     .button1, .button2 {
