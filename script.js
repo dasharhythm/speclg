@@ -35,3 +35,40 @@ accordionTitles.forEach((title) => {
         section.classList.toggle('open');
     });
 });
+
+
+
+//
+//
+// FORM
+//
+
+var form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            openModal('success-modal');
+            closeModal('form-modal');
+        } else {
+            response.json().then(data => {
+                alert("Ошибка: " + (data.errors ? data.errors.map(error => error.message).join(", ") : "Произошла ошибка при отправке формы."));
+            });
+        }
+    }).catch(error => {
+        alert("Произошла ошибка при отправке формы.");
+    });
+}
+
+form.addEventListener("submit", handleSubmit);
+
+
