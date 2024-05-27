@@ -1,3 +1,7 @@
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
 body {
     font-family: 'Inter';
     font-style: normal;
@@ -997,7 +1001,7 @@ hr {
 
     .contact-info {
         font-size: 13px;
-        line-height: 16px;
+        line-height: px;
     }
 
     .button1, .button2 {

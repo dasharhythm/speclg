@@ -128,6 +128,10 @@ textarea {
     padding: 40px;
 }
 
+#modal-content {
+    margin-right: 24px;
+}
+
 #modal-heading1 {
     margin-top: 24px;
 }
