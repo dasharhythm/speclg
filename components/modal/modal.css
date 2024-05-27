@@ -90,14 +90,12 @@ textarea {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 64px;
-    gap: 12px;
     width: 440px;
     height: 60px;
     color: #FFFFFF;
     background: #1047B0;
     box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     transition: color 180ms ease-in-out;
 }
@@ -216,10 +214,8 @@ textarea {
     }
 
     .submit-button {
-        padding: 16px 64px;
-        gap: 12px;
         width: 100%;
-        height: 40px;
+        height: 44px;
     }
 
     .checkbox {
