@@ -110,11 +110,16 @@
             </div>
         </div>
         <div class="banner">
-            <picture class="image cover 54x25 mobile:3x2">
-                <source media="(max-width: 600px)" srcset="assets/banners/Banner_mob.webp" type="image/webp">
-                <source srcset="assets/banners/Banner.webp" type="image/webp">
-                <img src="assets/banners/Banner.png" alt="banner">
-            </picture>
+            <div class="image cover 54x25 mobile:3x2">
+                <img src="assets/banners/Banner.png"
+                    srcset="assets/banners/Banner_mob.png 600w,
+                            assets/banners/Banner.png 1200w"
+                    sizes="(max-width: 600px) 100vw,
+                            100vw"
+                    alt="banner">
+
+
+            </div>
             <div class="inner">
                 <div class="text">
                     <h1>Аренда экскаваторов-погрузчиков в Санкт-Петербурге и Ленобласти</h1>
