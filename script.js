@@ -1,8 +1,3 @@
-document.getElementById('Button').addEventListener('click', function() {
-    ym(YOUR_COUNTER_ID, 'reachGoal', 'button_click');
-  });
-
-
 function goToLink(url) {
     window.open(url, '_blank');
 }
@@ -73,5 +68,10 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+
+document.getElementById('Button').addEventListener('click', function() {
+    ym(YOUR_COUNTER_ID, 'reachGoal', 'button_click');
+  });
 
 
