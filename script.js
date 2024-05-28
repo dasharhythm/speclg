@@ -70,8 +70,4 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 
-document.getElementById('Button').addEventListener('click', function() {
-    ym(97420268, 'reachGoal', 'button_click');
-});
-
 
