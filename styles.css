@@ -1067,18 +1067,6 @@ hr {
         padding: 7% 20px 9%;
     }
 
-    #first {
-        background-image: url(assets/banners/Banner_mob1.webp);
-    }
-
-    #second {
-        background-image: url(assets/banners/Banner_mob2.webp);
-    }
-
-    #third {
-        background-image: url(assets/banners/Banner_mob3.webp);
-    }
-
     .buttons {
         gap: 8px;
         font-weight: 400;
