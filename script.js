@@ -71,7 +71,7 @@ form.addEventListener("submit", handleSubmit);
 
 
 document.getElementById('Button').addEventListener('click', function() {
-    ym(YOUR_COUNTER_ID, 'reachGoal', 'button_click');
-  });
+    ym(97420268, 'reachGoal', 'button_click');
+});
 
 
