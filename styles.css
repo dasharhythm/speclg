@@ -175,19 +175,6 @@ a:hover {
     flex-direction: column;
 }
 
-#first {
-    background-image: url(assets/banners/Banner1.webp);
-    color: #1C1C1E;
-}
-
-#second {
-    background-image: url(assets/banners/Banner2.webp);
-}
-
-#third {
-    background-image: url(assets/banners/Banner3.webp);
-}
-
 .text {
     font-weight: 700;
     font-size: 56px;
@@ -251,6 +238,14 @@ a:hover {
 .button2:hover {
     color: #FFFFFF;
     background: #1859D7;
+}
+
+.controls.dark .next {
+    margin-right: 24px;
+}
+
+.controls.dark .prev {
+    margin-left: 24px;
 }
 
 .info {
