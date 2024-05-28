@@ -1,4 +1,7 @@
-
+document.getElementById('myButton').addEventListener('click', function() {
+    ym(YOUR_COUNTER_ID, 'reachGoal', 'button_click');
+  });
+  
 
 function goToLink(url) {
     window.open(url, '_blank');
