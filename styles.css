@@ -1059,7 +1059,7 @@ hr {
     }
 
     .menu-close {
-        padding: 28px 24px;
+        padding: 32px 24px 24px;
     }
 
     .contacts-col-container1 {
@@ -1067,8 +1067,7 @@ hr {
     }
 
     .logo {
-        width: 168px;
-        height: 42px;
+        height: 48px;
         cursor: pointer;
     }
 
