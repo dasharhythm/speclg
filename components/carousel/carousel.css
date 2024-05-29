@@ -151,6 +151,11 @@
 
     .carousel .slides.mobile-full-screen {
         margin: 0;
+        gap: 12px;
+    }
+
+    .carousel .slides.mobile-full-screen .slide.show {
+        padding: 0;
     }
 
     /* Стиль для элементов внутри карусели */
