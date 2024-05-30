@@ -857,6 +857,7 @@ hr {
     .advantage-list {
         display: flex;
         flex-wrap: wrap;
+        margin: 0 0 96px;
     }
 
     .advantage-card {
@@ -867,6 +868,10 @@ hr {
         display: none;
     }
 
+    .contact-container {
+        margin-top: 120px;
+    }
+    
     footer {
         display: flex;
     }
@@ -879,8 +884,6 @@ hr {
         display: block;
         margin-top: 12px;
     }
-
-    
 
     .link-heading {
         margin-top: 24px;
@@ -989,6 +992,32 @@ hr {
     #social-networks {
         gap: 8px;
     }
+
+    .info {
+        margin: 48px 0;
+    }
+
+    .advantage-list {
+        gap: 16px;
+        margin: 0 0 72px;
+    }
+
+    .card-list {
+        gap: 16px;
+        margin: 0 0 120px;
+    }
+
+    .contact-container {
+        margin-top: 120px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .menu-close {
+        padding: 48px 44px 32px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1023,7 +1052,7 @@ hr {
     }
 
     .menu-close {
-        padding: 32px 24px 24px;
+        padding: 24px;
     }
 
     .contacts-col-container1 {
@@ -1031,7 +1060,7 @@ hr {
     }
 
     .logo {
-        height: 48px;
+        height: 44px;
         cursor: pointer;
     }
 
@@ -1060,14 +1089,14 @@ hr {
     }
 
     .info {
-        margin: 32px 20px 64px;
+        margin: 32px 20px;
         gap: 12px;
     }
 
     .advantage-list {
         flex-direction: column;
         gap: 12px;
-        margin: 0 20px 64px;
+        margin: 0 20px 72px;
     }
 
     .advantage-card {
@@ -1087,7 +1116,7 @@ hr {
         flex-direction: column;
         padding: 0px;
         gap: 12px;
-        margin: 0 20px 64px;
+        margin: 0 20px 72px;
     }
 
     .card {
@@ -1269,7 +1298,7 @@ hr {
 
     .contact-container {
         position: static;
-        margin: 52px 20px 24px;
+        margin: 64px 20px 32px;
         padding: 32px;
         width: calc(100% - 40px);
     }

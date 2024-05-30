@@ -138,6 +138,12 @@
     background-color: #1047B0;
 }
 
+@media (max-width: 1200px) {
+    .carousel .indicators {
+        padding: 16px 0 80px;  
+    }
+}
+
 @media (max-width: 600px) {
     .carousel .slides {
         display: flex;
