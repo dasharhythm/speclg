@@ -880,49 +880,7 @@ hr {
         margin-top: 12px;
     }
 
-    .accordion {
-        margin: 20px 20px 0;
-    }
-
-    /* Заголовки аккордеона */
-    .accordion-title {
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer;
-        /* Указатель при наведении */
-        padding: 16px 0;
-        border-bottom: 0.5px solid #B5B6B9;
-    }
-
-    .accordion-title::after {
-        content: ' ';
-        width: 20px;
-        background-image: url(assets/Dropdown.svg);
-        background-repeat: no-repeat;
-        background-position: right center;
-        /* Положение иконки */
-        transition: transform 300ms ease;
-        /* Анимация перехода */
-    }
-
-    /* При добавлении класса 'open' к .accordion-header, иконка поворачивается на 90 градусов */
-    .accordion-title.open::after {
-        transform: rotate(-90deg);
-    }
-
-    /* Контент аккордеона (скрыт по умолчанию) */
-    .accordion-content {
-        display: none;
-        /* Скрыть контент по умолчанию */
-        padding: 10px;
-        /* Отступы внутри контента */
-    }
-
-    /* Стиль для развернутой секции */
-    .accordion-section.open .accordion-content {
-        display: block;
-        /* Показать контент при развертывании */
-    }
+    
 
     .link-heading {
         margin-top: 24px;
