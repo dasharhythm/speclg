@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -52,8 +52,16 @@
         padding-top: calc(9 / 16 * 100%);
     }
 
+    .image.mobile\:2x1::before {  
+        padding-top: calc(1 / 2 * 100%);
+    }
+
     .image.mobile\:3x2::before {  
         padding-top: calc(2 / 3 * 100%);
+    }
+
+    .image.mobile\:4x3::before {  
+        padding-top: calc(3 / 4 * 100%);
     }
 
     .image.mobile\:54x25::before { 
