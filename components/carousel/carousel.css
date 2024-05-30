@@ -139,7 +139,7 @@
 }
 
 @media (max-width: 1200px) {
-    .carousel #indicators {
+    .carousel.with-padding-in-indicators .indicators {
         padding: 16px 0 80px;  
     }
 }
@@ -188,7 +188,7 @@
         /* Показываем слайды, которые должны быть видимыми */
     }
 
-    .carousel #indicators {
+    .carousel.with-padding-in-indicators .indicators {
         padding: 4px;
     }
     

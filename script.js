@@ -51,5 +51,4 @@ async function handleSubmit(event) {
 
 form.addEventListener("submit", handleSubmit);
 
-//<script>document.querySelectorAll('Button').addEventListener('click', function() { ym(97420268, 'reachGoal', 'button_click');});</script>
-
+if (ym) document.querySelectorAll('button').addEventListener('click', function() { ym(97420268, 'reachGoal', 'button_click');});
