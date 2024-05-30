@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
+
+    <meta name="description"
+        content="Аренда экскаваторов-погрузчиков по выгодным ценам. Быстрая доставка и качественное обслуживание. Звоните прямо сейчас: +7(999)118-58-55">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Спецлогистика">
+    <meta property="og:description"
+        content="Аренда экскаваторов-погрузчиков по выгодным ценам. Быстрая доставка и качественное обслуживание. Звоните прямо сейчас: +7(999)118-58-55">
+    <meta property="og:image" content="/assets/banners/Bannerforpreview.png">
+    <meta property="og:url" content="https://arenda.speclg.ru/ekskavatory-pogruzchiki">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Спецлогистика">
+    <meta name="twitter:description"
+        content="Аренда экскаваторов-погрузчиков по выгодным ценам. Быстрая доставка и качественное обслуживание. Звоните прямо сейчас: +7(999)118-58-55">
+    <meta name="twitter:image" content="/assets/banners/Bannerforpreview.png">
+    <meta name="twitter:url" content="https://arenda.speclg.ru/ekskavatory-pogruzchiki">
+
+
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Грузоперевозки | Спецтехника</title>
@@ -13,10 +35,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="components/carousel/carousel.css" />
-    <script src="components/carousel/carousel.js" defer></script>
     <link rel="stylesheet" href="components/modal/modal.css" />
     <script src="components/modal/modal.js" defer></script>
+    <link rel="stylesheet" href="components/carousel/carousel.css" />
+    <script src="components/carousel/carousel.js" defer></script>
     <link rel="stylesheet" href="components/accordion/accordion.css" />
     <script src="components/accordion/accordion.js" defer></script>
     <link rel="stylesheet" href="components/image/image.css" />
@@ -128,7 +150,7 @@
                                 <h1 id="text">Быстрая доставка любых грузов по России и СНГ</h1>
                             </div>
                             <div class="buttons">
-                                <button class="button1" onclick="openModal()">Заказать</button>
+                                <button class="button1" onclick="openModal('form-modal')">Заказать</button>
                                 <button class="button2"
                                     onclick="goToLink('https://speclg.ru/#gruzoperevozki')">Подробнее</button>
                             </div>
@@ -163,7 +185,7 @@
                         </div>
                         <div class="inner">
                             <div class="text">
-                                <h1>Негабаритные первозки различных грузов</h1>
+                                <h1>Негабаритные перевозки различных грузов</h1>
                             </div>
                             <div class="buttons">
                                 <button class="button1" onclick="openModal()">Заказать</button>
@@ -1123,4 +1145,54 @@
                 </div>
             </div>
     </footer>
+    <div class="modal-overlay" id="form-modal">
+        <div class="modal">
+            <button class="modal-close x">
+                <img id="close" src="assets/close.svg" alt="close button">
+            </button>
+            <form class="modal-content" id="contact-form" action="https://formspree.io/f/xwkgjjvj" method="POST">
+                <h3 class="modal-heading1">Оставьте заявку на расчет</h3>
+                <h4 class="modal-heading2">Мы рассчитаем стоимость услуг и перезвоним Вам.</h4>
+                <div class="modal-item">
+                    <label>Вид техники</label>
+                    <input type="text" name="equipment" value="Грузоперевоки" readonly>
+                </div>
+                <div class="modal-item">
+                    <label>Ваше имя</label>
+                    <input type="text" name="username" placeholder="Василий">
+                </div>
+                <div class="modal-item">
+                    <label>Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required
+                        pattern="\+?\d{1,3}?\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}"
+                        placeholder="+7(999) 123-45-67">
+                </div>
+                <div class="modal-item">
+                    <label>Комментарий</label>
+                    <textarea name="comment" rows="3" placeholder="Параметры и описание работ"></textarea>
+                </div>
+                <label class="modal-item" id="modal-item">
+                    <input type="checkbox" class="checkbox" required>
+                    <span id="checkbox-text">Отправляя заявку, вы даете согласие на обработку
+                        персональных данных</span>
+                </label>
+                <button class="submit-button" type="submit">Рассчитать</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal">
+            <button class="modal-close x">
+                <img id="close" src="assets/close.svg" alt="close button">
+            </button>
+            <div class="modal-content" id="modal-content">
+                <h3 class="modal-heading1" id="modal-heading1">Заявка успешно отправлена</h3>
+                <p class="modal-heading2" id="modal-heading2">Мы получили вашу заявку. Наш менеджер свяжется с вами в
+                    ближайшее время.</p>
+                <button class="submit-button x">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html>

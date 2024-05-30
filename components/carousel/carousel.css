@@ -187,6 +187,10 @@
         width: 100%;
         /* Показываем слайды, которые должны быть видимыми */
     }
+
+    .carousel #indicators {
+        padding: 4px;
+    }
     
     .controls {
         display: none;
