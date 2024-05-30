@@ -985,6 +985,10 @@ hr {
     .controls.external {
         display: none;
     }
+
+    #social-networks {
+        gap: 8px;
+    }
 }
 
 @media (max-width: 600px) {
