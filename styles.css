@@ -255,11 +255,15 @@ a:hover {
     gap: 24px;
 }
 
+.heading {
+    margin-bottom: 40px;
+}
+
 .advantage-list {
     display: flex;
     justify-content: space-between;
     gap: 24px;
-    margin: 0 0 72px;
+    margin: 0 0 80px;
 }
 
 .advantage-card {
@@ -860,12 +864,21 @@ hr {
         margin: 0 0 96px;
     }
 
+    .heading {
+        margin-bottom: 32px;
+    }
+
     .advantage-card {
         width: 100%;
     }
 
     .chip-list {
         display: none;
+    }
+
+    .card-equipment {
+        width: 100%;
+        height: 100%;
     }
 
     .contact-container {
@@ -995,6 +1008,7 @@ hr {
 
     .info {
         margin: 48px 0;
+        gap: 20px;
     }
 
     .advantage-list {
@@ -1018,6 +1032,7 @@ hr {
     .menu-close {
         padding: 48px 44px 32px;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -1089,8 +1104,12 @@ hr {
     }
 
     .info {
-        margin: 52px 20px 36px;
+        margin: 72px 20px 36px;
         gap: 12px;
+    }
+
+    .heading {
+        margin: 0 20px 24px;
     }
 
     .advantage-list {
