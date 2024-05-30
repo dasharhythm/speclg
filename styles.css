@@ -998,7 +998,7 @@ hr {
         width: 20px;
     }
 
-    .controls.external {
+    .controls.external, .controls.dark  {
         display: none;
     }
 

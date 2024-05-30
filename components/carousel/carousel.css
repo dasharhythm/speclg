@@ -139,8 +139,14 @@
 }
 
 @media (max-width: 1200px) {
-    .carousel .indicators {
+    .carousel #indicators {
         padding: 16px 0 80px;  
+    }
+}
+
+@media (max-width: 899px) {
+    .carousel .indicators.inside {
+        bottom: 4px;
     }
 }
 
