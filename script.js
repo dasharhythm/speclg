@@ -51,4 +51,12 @@ async function handleSubmit(event) {
 
 form.addEventListener("submit", handleSubmit);
 
-if (ym) document.querySelectorAll('button').addEventListener('click', function() { ym(97420268, 'reachGoal', 'button_click');});
+// Получаем все кнопки
+const buttons = document.querySelectorAll('button');
+
+// Перебираем каждую кнопку и добавляем обработчик событий
+buttons.forEach((button) => {
+    button.addEventListener('click', function() {
+        ym(97420268, 'reachGoal', 'button_click');
+    });
+});
