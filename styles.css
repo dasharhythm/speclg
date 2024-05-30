@@ -1002,9 +1002,14 @@ hr {
 
     .page-header {
         display: flex;
-        padding: 20px;
+        padding: 12px 20px;
+        background: #FFFFFF;
         align-items: center;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
         justify-content: space-between;
+        box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
     }
 
     .menu-items {
@@ -1021,7 +1026,7 @@ hr {
     }
 
     .contacts-col-container1 {
-        margin: 32px 24px 24px;
+        margin: 24px;
     }
 
     .logo {
