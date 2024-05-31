@@ -8,6 +8,29 @@ function initCarousel(carousel) {
     const indicatorsContainer = carousel.querySelector('.indicators');
     const slides = Array.from(slidesContainer.children);
     let slideWidth = slides[0].getBoundingClientRect().width;
+    let isAutoscroll = carousel.classList.contains('autoscroll');
+
+    let indicators = carousel.querySelectorAll('.indicator');
+    let slideStep = getSlideStep();
+    let indicatorsCount = Math.ceil(slides.length / slideStep);
+    let currentSlideIndex = 0;
+
+    const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
+
+    let autoScrollDirection = 'forward'
+
+    if (isAutoscroll) {
+        setInterval(function () {
+            // TODO: надо учитывать сколько слайдов показывается
+            const lastSlideIndex = slides.length - 1;
+            if (currentSlideIndex === lastSlideIndex) autoScrollDirection = 'backward'
+            if (currentSlideIndex === 0) autoScrollDirection = 'forward';
+
+            if (autoScrollDirection === 'forward') goToNextSlide()
+            else goToPrevSlide()
+        }, 8000)
+    }
+
 
     // // Зафиксировать высоту scrollContainer
     // const scrollContainerHeight = scrollContainer.clientHeight;
@@ -23,12 +46,7 @@ function initCarousel(carousel) {
     }
 
 
-    let indicators = carousel.querySelectorAll('.indicator');
-    let slideStep = getSlideStep();
-    let indicatorsCount = Math.ceil(slides.length / slideStep)
-    let currentSlideIndex = 0;
 
-    const mediaQueryIsMobile = window.matchMedia("(max-width: 1200px)");
 
     function refreshIndicators(event) {
         const isMobile = event.matches
@@ -100,17 +118,23 @@ function initCarousel(carousel) {
         // и он вызывется автоматически при вызове scrollTo на scrollContainer
     }
 
-    // Обработчики для кнопок "назад" и "вперед"
-    prevButton.addEventListener('click', () => {
+    function goToPrevSlide() {
         const prevSlideIndex = Math.max(currentSlideIndex - slideStep, 0);
         goToSlide(prevSlideIndex);
-    });
+    }
 
-    nextButton.addEventListener('click', () => {
+    // Обработчики для кнопок "назад" и "вперед"
+    prevButton.addEventListener('click', goToPrevSlide);
+
+
+    function goToNextSlide() {
         const lastSlideIndex = slides.length - 1;
         const nextSlideIndex = Math.min(currentSlideIndex + slideStep, lastSlideIndex);
         goToSlide(nextSlideIndex);
-    });
+    }
+
+    nextButton.addEventListener('click', goToNextSlide);
+
 
     // Обработчик для отслеживания прокрутки
     scrollContainer.addEventListener('scroll', () => {
@@ -139,14 +163,14 @@ function initCarousel(carousel) {
         createIndicators(visibleSlides / slideStep); // Создаем индикаторы для видимых слайдов
         currentSlideIndex = 0; // Начинаем с первого видимого слайда
         setActiveIndicator(currentSlideIndex);
-    } 
+    }
 }
 
 document.querySelectorAll('.carousel').forEach(function (carouselItem) {
     initCarousel(carouselItem);
 })
 
-function filterSlides(carouselId, classNameToFilterBy) { 
+function filterSlides(carouselId, classNameToFilterBy) {
     const carousel = document.querySelector('#' + carouselId);
     const slidesContainer = carousel.querySelector('.slides');
     const slides = Array.from(slidesContainer.children);

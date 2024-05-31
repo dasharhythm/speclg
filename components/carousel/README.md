@@ -2,7 +2,7 @@
 
 
 ```html
-<div class="carousel">
+<div class="carousel autoscroll">
     <div class="slides show-2 mobile-full-screen">
         <div class="show slide"></div>
         <div class="show slide"></div>
@@ -32,7 +32,7 @@
         <img src="assets/Forward.svg">
     </button>
 </div>
-<div class="carousel" id="carousel1">
+<div class="carousel with-padding-in-indicators" id="carousel1">
     <div class="slides">
         <div class="show slide"></div>
         <div class="show slide"></div>
