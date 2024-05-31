@@ -69,7 +69,7 @@ h5 {
     align-items: center;
 }
 
-.contact-info {
+.contact-info, .equipment-info {
     color: #636366;
     font-size: 15px;
     line-height: 20px;
@@ -968,7 +968,7 @@ hr {
         line-height: 34px;
     }
 
-    .contact-info {
+    .contact-info, .equipment-info {
         font-size: 13px;
         line-height: px;
     }
