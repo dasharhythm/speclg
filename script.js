@@ -60,3 +60,13 @@ buttons.forEach((button) => {
         ym(97420268, 'reachGoal', 'button_click');
     });
 });
+
+
+// Фильтрация по тегам и создание новых индикаторов
+document.querySelectorAll('.tag').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter; // Получаем фильтр
+
+        filterSlides('carousel-reviews', filter);
+    });
+});

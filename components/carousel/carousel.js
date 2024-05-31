@@ -6,7 +6,7 @@ function initCarousel(carousel) {
     const slidesContainer = carousel.querySelector('.slides');
     const scrollContainer = slidesContainer
     const indicatorsContainer = carousel.querySelector('.indicators');
-    const slides = Array.from(scrollContainer.children);
+    const slides = Array.from(slidesContainer.children);
     let slideWidth = slides[0].getBoundingClientRect().width;
 
     // // Зафиксировать высоту scrollContainer
@@ -121,33 +121,6 @@ function initCarousel(carousel) {
         }
     });
 
-    /// НЕ ОТНОСИТСЯ К КАРУСЕЛИ
-
-    // Фильтрация по тегам и создание новых индикаторов
-    document.querySelectorAll('.tag').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const filter = btn.dataset.filter; // Получаем фильтр
-
-            let visibleSlides = 0; // Считаем видимые слайды
-            slides.forEach((slide) => {
-                if (filter === 'all' || slide.classList.contains(filter)) {
-                    slide.classList.add('show');
-                    visibleSlides++; // Увеличиваем счетчик видимых слайдов
-                } else {
-                    slide.classList.remove('show');
-                }
-            });
-
-            // Прокручиваем карусель в начало
-            scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-
-            // Обновляем индикаторы и текущий индекс
-            createIndicators(visibleSlides / slideStep); // Создаем индикаторы для видимых слайдов
-            currentSlideIndex = 0; // Начинаем с первого видимого слайда
-            setActiveIndicator(currentSlideIndex);
-        });
-    });
-
     function getSlideStep() {
         if (slidesContainer.classList.contains('show-1')) return 1;
         if (slidesContainer.classList.contains('show-2')) return 2;
@@ -156,8 +129,35 @@ function initCarousel(carousel) {
         if (slidesContainer.classList.contains('show-5')) return 5;
         return 1; // По умолчанию
     }
+
+    carousel.reset = function () {
+        const visibleSlides = Array.from(slidesContainer.querySelectorAll('.slide.show')).length;
+        // Прокручиваем карусель в начало
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+
+        // Обновляем индикаторы и текущий индекс
+        createIndicators(visibleSlides / slideStep); // Создаем индикаторы для видимых слайдов
+        currentSlideIndex = 0; // Начинаем с первого видимого слайда
+        setActiveIndicator(currentSlideIndex);
+    } 
 }
 
 document.querySelectorAll('.carousel').forEach(function (carouselItem) {
     initCarousel(carouselItem);
 })
+
+function filterSlides(carouselId, classNameToFilterBy) { 
+    const carousel = document.querySelector('#' + carouselId);
+    const slidesContainer = carousel.querySelector('.slides');
+    const slides = Array.from(slidesContainer.children);
+
+    slides.forEach((slide) => {
+        if (classNameToFilterBy === 'all' || slide.classList.contains(classNameToFilterBy)) {
+            slide.classList.add('show');
+        } else {
+            slide.classList.remove('show');
+        }
+    });
+
+    carousel.reset();
+}

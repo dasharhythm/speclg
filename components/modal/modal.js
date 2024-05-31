@@ -17,7 +17,6 @@ function closeModal(modalId) {
 
 function initModal(overlay) {
     const modalId = overlay.id;
-    console.log('modalId')
 
     overlay.addEventListener("click", function (event) {
         if (event.target === overlay) { // Если клик был на оверлей, закрыть модалку
