@@ -10,8 +10,8 @@ function initCarousel(carousel) {
     let slideWidth = slides[0].getBoundingClientRect().width;
 
     // // Зафиксировать высоту scrollContainer
-    // const scrollContainerHeight = scrollContainer.clientHeight;
-    // scrollContainer.style.height = `${scrollContainerHeight}px`;
+    const scrollContainerHeight = scrollContainer.clientHeight;
+    scrollContainer.style.height = `${scrollContainerHeight}px`;
 
     let prevButton = carousel.querySelector('.prev');
     let nextButton = carousel.querySelector('.next');
