@@ -28,7 +28,7 @@ function initCarousel(carousel) {
 
             if (autoScrollDirection === 'forward') goToNextSlide()
             else goToPrevSlide()
-        }, 8000)
+        }, 5000)
     }
 
 
