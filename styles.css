@@ -1212,6 +1212,7 @@ hr {
 
     .tags-list {
         gap: 8px;
+        padding-bottom: 2px;
         margin: 20px 0 16px;
         overflow-x: auto;
         /* Позволяет горизонтальную прокрутку */
