@@ -56,9 +56,14 @@ const buttons = document.querySelectorAll('button');
 
 // Перебираем каждую кнопку и добавляем обработчик событий
 buttons.forEach((button) => {
-    button.addEventListener('click', function() {
-        ym(97456114, 'reachGoal', 'button_click');
-    });
+    const metrikaId = button.dataset.metrika;
+    if (metrikaId) {
+        // добавляем ниже отдельно, тут ничего не делаем
+    } else {
+        button.addEventListener('click', function() {
+            ym(97456114, 'reachGoal', 'button_click');
+        });
+    }
 });
 
 
@@ -70,3 +75,8 @@ document.querySelectorAll('.tag').forEach((btn) => {
         filterSlides('carousel-reviews', filter);
     });
 });
+
+document.querySelectorAll('[data-metrika]').forEach(button => {
+    const metrikaId = button.dataset.metrika;
+    ym(97456114,'reachGoal', metrikaId)
+})
