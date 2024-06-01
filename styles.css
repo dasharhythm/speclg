@@ -70,7 +70,6 @@ h5 {
 }
 
 .contact-info, .equipment-info {
-    display: flex;
     color: #636366;
     font-size: 15px;
     line-height: 20px;
