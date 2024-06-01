@@ -70,10 +70,10 @@ h5 {
 }
 
 .contact-info, .equipment-info {
+    display: flex;
     color: #636366;
     font-size: 15px;
     line-height: 20px;
-    display: flex;
 }
 
 .contacts-col-right {
@@ -971,7 +971,7 @@ hr {
 
     .contact-info, .equipment-info {
         font-size: 13px;
-        line-height: px;
+        line-height: 16px;
     }
 
     .button1, .button2 {
