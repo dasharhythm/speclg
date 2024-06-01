@@ -73,6 +73,7 @@ h5 {
     color: #636366;
     font-size: 15px;
     line-height: 20px;
+    display: flex;
 }
 
 .contacts-col-right {
