@@ -73,6 +73,8 @@ h5 {
     color: #636366;
     font-size: 15px;
     line-height: 20px;
+    padding: 0; /* Установите паддинги по своему желанию */
+    margin: 0;
 }
 
 .contacts-col-right {
