@@ -57,7 +57,7 @@ const buttons = document.querySelectorAll('button');
 // Перебираем каждую кнопку и добавляем обработчик событий
 buttons.forEach((button) => {
     button.addEventListener('click', function() {
-        ym(96797503, 'reachGoal', 'button_click');
+        ym(97456114, 'reachGoal', 'button_click');
     });
 });
 
