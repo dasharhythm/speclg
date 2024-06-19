@@ -68,7 +68,4 @@
         padding-top: calc(25 / 54 * 100%);
     }
 
-    .image.mobile\:13x7::before { 
-        padding-top: calc(13 / 7 * 100%);
-    }
 }
