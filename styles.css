@@ -393,6 +393,10 @@ sup {
     color: #1859D7;
 }
 
+.card-content {
+    height: 186px;
+}
+
 .tag-list {
     display: flex;
     flex-direction: row;
@@ -1198,6 +1202,10 @@ hr {
         font-size: 13px;
     }
 
+    .card-content {
+        height: 100%;
+    }
+    
     #reviews {
         margin-left: 20px;
     }
