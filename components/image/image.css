@@ -29,6 +29,10 @@
     padding-top: calc(3 / 4 * 100%);
 }
 
+.image.\33 x2::before {  /* 3x2 ratio */
+    padding-top: calc(2 / 3 * 100%);
+}
+
 .image.\31 6x9::before {  /* 16x9 ratio */
     padding-top: calc(9 / 16 * 100%);
 }
@@ -44,6 +48,7 @@
 .image.\35 4x25::before {  /* 54:25 ratio */
     padding-top: calc(25 / 54 * 100%);
 }
+
 
 
 /* Responsive behavior */

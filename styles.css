@@ -397,6 +397,14 @@ sup {
     height: 186px;
 }
 
+.trawl-card {    
+    width: 416px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
+    border-radius: 4px;
+    padding: 40px 40px 48px;
+}
+
 .tag-list {
     display: flex;
     flex-direction: row;
