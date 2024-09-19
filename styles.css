@@ -661,6 +661,7 @@ sup {
 .phone a {
     color: #FFFFFF;
     font-weight: 600;
+    height: 24px;
 }
 
 .whatsapp-button {
