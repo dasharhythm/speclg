@@ -658,7 +658,7 @@ sup {
     animation: pulse 0.6s infinite;
 }
 
-.phone p {
+.phone a {
     color: #FFFFFF;
     font-weight: 600;
 }
