@@ -639,6 +639,7 @@ sup {
 }
 
 .phone {
+    display: flex;
     position: fixed;
     bottom: 100px;
     right: 20px;  
@@ -662,6 +663,8 @@ sup {
     color: #FFFFFF;
     font-weight: 600;
     height: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .whatsapp-button {
