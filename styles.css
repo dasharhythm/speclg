@@ -650,7 +650,7 @@ sup {
     padding: 12px 20px;
     color: #FFFFFF;
     background-color: #24D366;
-    box-shadow: 0px 2px 8px rgba(17, 17, 30, 0.15);
+    box-shadow: 4px 4px 20px rgba(0, 255, 9, 0.3), -4px -4px 20px rgba(0, 255, 9, 0.3);
     border-radius: 32px;
 }
 
