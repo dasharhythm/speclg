@@ -641,9 +641,9 @@ sup {
 .phone {
     display: flex;
     position: fixed;
-    bottom: 100px;
+    bottom: 96px;
     right: 20px;  
-    height: 40px;
+    height: 48px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
