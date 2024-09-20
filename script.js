@@ -80,3 +80,4 @@ document.querySelectorAll('[data-metrika]').forEach(button => {
     const metrikaId = button.dataset.metrika;
     ym(97456114,'reachGoal', metrikaId)
 })
+
