@@ -1,85 +1,116 @@
 .image {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.custom-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 600px;
 }
 
+.custom-image::before {
+  content: none;
+}
+.custom-image img {
+  position: relative;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .image.cover img {
-    object-fit: cover; 
+  object-fit: cover;
 }
 
 .image::before {
-    content: '';
-    display: block;
-    padding-top: 100%; /* Default to 1:1 ratio */
+  content: "";
+  display: block;
+  padding-top: 100%; /* Default to 1:1 ratio */
 }
-
 .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
 /* Aspect ratios */
-.image.\34 x3::before {  /* 4x3 ratio */
-    padding-top: calc(3 / 4 * 100%);
+.image.\34 x3::before {
+  /* 4x3 ratio */
+  padding-top: calc(3 / 4 * 100%);
 }
 
-.image.\33 x2::before {  /* 3x2 ratio */
-    padding-top: calc(2 / 3 * 100%);
+.image.\33 x2::before {
+  /* 3x2 ratio */
+  padding-top: calc(2 / 3 * 100%);
 }
 
-.image.\31 6x9::before {  /* 16x9 ratio */
-    padding-top: calc(9 / 16 * 100%);
+.image.\31 6x9::before {
+  /* 16x9 ratio */
+  padding-top: calc(9 / 16 * 100%);
 }
 
-.image.\31 x1::before {  /* 1x1 ratio */
-    padding-top: 100%;
+.image.\31 x1::before {
+  /* 1x1 ratio */
+  padding-top: 100%;
 }
 
-.image.\39 x7::before {  /* 9x7 ratio */
-    padding-top: calc(7 / 9 * 100%);
+.image.\39 x7::before {
+  /* 9x7 ratio */
+  padding-top: calc(7 / 9 * 100%);
 }
 
-.image.\35 4x25::before {  /* 54:25 ratio */
-    padding-top: calc(25 / 54 * 100%);
+.image.\35 4x25::before {
+  /* 54:25 ratio */
+  padding-top: calc(25 / 54 * 100%);
 }
-
-
 
 /* Responsive behavior */
+@media (max-width: 1000px) {
+  .custom-image::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Default to 1:1 ratio */
+  }
+
+  .custom-image img {
+    top: 0;
+    position: absolute;
+  }
+}
 @media (max-width: 600px) {
-    .image.mobile\:16x9::before { 
-        padding-top: calc(9 / 16 * 100%);
-    }
+  .image.mobile\:16x9::before {
+    padding-top: calc(9 / 16 * 100%);
+  }
 
-    .image.mobile\:2x1::before {  
-        padding-top: calc(1 / 2 * 100%);
-    }
+  .image.mobile\:2x1::before {
+    padding-top: calc(1 / 2 * 100%);
+  }
 
-    .image.mobile\:3x2::before {  
-        padding-top: calc(2 / 3 * 100%);
-    }
+  .image.mobile\:3x2::before {
+    padding-top: calc(2 / 3 * 100%);
+  }
 
-    .image.mobile\:4x3::before {  
-        padding-top: calc(3 / 4 * 100%);
-    }
+  .image.mobile\:4x3::before {
+    padding-top: calc(3 / 4 * 100%);
+  }
 
-    .image.mobile\:54x25::before { 
-        padding-top: calc(25 / 54 * 100%);
-    }
-
+  .image.mobile\:54x25::before {
+    padding-top: calc(25 / 54 * 100%);
+  }
 }
